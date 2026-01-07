@@ -53,7 +53,7 @@ body {
 
 /* Hover effect for all links including Home */
 .nav-item:hover {
-    color: #8bc34a; /* Subtle green change only on hover */
+    color: #00ABEA; /* Subtle green change only on hover */
 }
 
 /* Icons Section */
@@ -78,7 +78,7 @@ body {
     position: absolute;
     top: -8px;
     right: -10px;
-    background: #8bc34a;
+    background: #00ABEA;
     color: white;
     font-size: 11px;
     padding: 2px 6px;
@@ -87,8 +87,8 @@ body {
 }
 /*carousel*/
 
-      .banner {
-    --banner-bg: #74b83b;
+.banner {
+    --banner-bg: #00ABEA;
     background-color: var(--banner-bg);
    
     /* Makes it full-width like the footer/header */
@@ -177,15 +177,44 @@ body {
 
       /* Updated Animation and Image Styling */
 .watch-image {
-    width: 467px;
+    width: 667px;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
     position: relative;
-    top: -45px;
+    top: -105px;
     animation: floatLoop 4s ease-in-out infinite;
    
     /* ADD THIS LINE for smooth image swapping */
     transition: opacity 0.3s ease-in-out;
 }
+
+#carousel-watch{
+
+}
+.left_arrow, .right_arrow{
+    font-size: 80px;
+    background-color: rgb(255, 255, 255);
+    color: #00ABEA;
+    height: 10%;
+    width: 2%;
+    border-radius: 100%;
+    border: 2px solid #00ABEA;
+}
+.left_arrow p, .right_arrow p{
+    margin-top: -2rem;
+}
+.left_arrow{
+    position: absolute;
+    align-content: flex-start;
+    left: -10px;
+}
+.right_arrow{
+    position: absolute;
+    align-content: flex-end;
+    right: -10px;
+}
+/* #carousel-watch{
+    box-shadow: 20px 30px 40px rgb(224, 224, 224);
+} */
 @keyframes floatLoop {
     0% {
         /* Start at -20px (Higher up) */
@@ -229,7 +258,7 @@ body {
     margin-top: 25px;
     padding: 12px 30px;
     background-color: #ffffff; /* White button to pop against green */
-    color: #74b83b; /* Green text to match banner */
+    color: #00ABEA; /* Green text to match banner */
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
@@ -259,7 +288,7 @@ body {
 
 .banner-nav-btn:hover {
     background-color: #ffffff;
-    color: #74b83b; /* Arrow turns green on hover */
+    color: #00ABEA; /* Arrow turns green on hover */
 }
 
 .banner-nav-btn svg {
@@ -351,7 +380,7 @@ body {
 .card-laptop { background-color: #d32f2f; color: white; }
 .card-laptop .browse-btn { color: #d32f2f; }
 .card-console { background-color: #eeeeee; color: #333; }
-.card-oculus { background-color: #8bc34a; color: white; }
+.card-oculus { background-color: #00ABEA; color: white; }
 .card-speaker { background-color: #4285f4; color: white; }
 
 /*new launches*/
@@ -469,7 +498,7 @@ body {
 }
 
 .sub-title {
-    color: #8cc63f;
+    color: #00ABEA;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -538,7 +567,7 @@ body {
 }
 
 .blog-meta .date {
-    color: #8cc63f;
+    color: #00ABEA;
 }
 
 .blog-meta .date strong {
@@ -571,7 +600,7 @@ body {
 }
 
 .read-more:hover {
-    color: #8cc63f;
+    color: #00ABEA;
 }
 
 .read-more i {
