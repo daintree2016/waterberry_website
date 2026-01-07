@@ -1,0 +1,730 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+body {
+    background-color: ghostwhite;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*header*/
+.header-container {
+    background-color: #ffffff;
+    width: calc(100% + 40px);
+    margin: -40px -20px 40px -20px;
+   
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 50px;
+    height: 80px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo img {
+    height: 35px; 
+    width: auto;
+}
+.nav-group-right {
+    display: flex;
+    align-items: center;
+    gap: 45px; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; 
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #000; /* All links are now black */
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for all links including Home */
+.nav-item:hover {
+    color: #8bc34a; /* Subtle green change only on hover */
+}
+
+/* Icons Section */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    stroke: #000;
+}
+
+.cart-container {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #8bc34a;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+/*carousel*/
+
+      .banner {
+    --banner-bg: #74b83b;
+    background-color: var(--banner-bg);
+   
+    /* Makes it full-width like the footer/header */
+    width: calc(100% + 0px);
+    margin-left: -20px;
+    margin-right: -20px;
+
+    /* MOVE SMALL DOWN: Adjust this value to change the gap size */
+    margin-top: 30px;
+   
+    height: 552px;
+    border-radius: 30px; /* Removing radius for a full-width 'footer' look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 60px;
+    color: white; /* Changed to white as per screenshot */
+    overflow: visible;
+}
+.auto-swap-watch {
+    /* 1. Keep your existing floating animation */
+    /* 2. Add the imageSwap animation (12s total: 3 images x 4s each) */
+    animation:
+        floatLoop 4s ease-in-out infinite,
+        imageSwap 12s step-end infinite;
+}
+
+@keyframes imageSwap {
+    /* Image 1 (0s to 4s) */
+    0%, 33.32% {
+        content: url("https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f44_ads1-1.avif");
+    }
+    /* Image 2 (4s to 8s) */
+    33.33%, 66.65% {
+        content: url("https://i.ibb.co/Ldq7m9v/watch-removebg.png");
+    }
+    /* Image 3 (8s to 12s) */
+    66.66%, 100% {
+        content: url("https://i.ibb.co/6883pY6/watch-black.png"); /* Example 3rd watch */
+    }
+}
+
+/* Ensure the floating animation stays the same */
+@keyframes floatLoop {
+    0% { transform: translate3d(0px, -20px, 0px); }
+    25% { transform: translate3d(0px, 15px, 0px); }
+    100% { transform: translate3d(0px, -20px, 0px); }
+}
+/* Ensure the watch container doesn't get clipped by the gap */
+
+        /* Left Side */
+        .left-side {
+            flex: 1.2;
+            padding-left: 10px;
+        }
+
+        .left-side .percent {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .left-side h1 {
+            font-size: 105px;
+            line-height: 0.85;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .left-side .date {
+            margin-top: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Center Watch */
+       .watch-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+
+      /* Updated Animation and Image Styling */
+.watch-image {
+    width: 467px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+    position: relative;
+    top: -45px;
+    animation: floatLoop 4s ease-in-out infinite;
+   
+    /* ADD THIS LINE for smooth image swapping */
+    transition: opacity 0.3s ease-in-out;
+}
+@keyframes floatLoop {
+    0% {
+        /* Start at -20px (Higher up) */
+        transform: translate3d(0px, -20px, 0px);
+    }
+    50% {
+        /* Drop down slightly to 0px */
+        transform: translate3d(0px, 10px, 0px);
+    }
+    100% {
+        /* Return to -20px */
+        transform: translate3d(0px, -20px, 0px);
+    }
+}
+
+        /* Right Side */
+        .right-side {
+            flex: 1;
+            padding-right: 10px;
+        }
+
+        .right-side .brand {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        .right-side h2 {
+            font-size: 3.2rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .right-side p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            max-width: 280px;
+            font-weight: 400;
+        }
+.shop-now-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #ffffff; /* White button to pop against green */
+    color: #74b83b; /* Green text to match banner */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+}
+/* Navigation Buttons */
+.banner-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Small circle size */
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.banner-nav-btn:hover {
+    background-color: #ffffff;
+    color: #74b83b; /* Arrow turns green on hover */
+}
+
+.banner-nav-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Ensure the image can fade smoothly */
+.watch-image {
+    transition: opacity 0.3s ease-in-out;
+}
+.shop-now-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
+       
+.heading{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    font-size: 38px;
+    font-weight: 800;
+    padding-top: 20px;
+}
+/*category*/
+.cat-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto 60px auto;
+}
+.prod-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+.cat-item-card {
+    position: relative;
+    border-radius: 20px;
+    height: 250px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.cat-item-card img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 80%;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+.cat-item-card:hover img {
+    transform: scale(1.1);
+}
+.card-content { z-index: 2; }
+.label { font-size: 14px; margin-bottom: 5px; display: block; }
+.title-top { font-size: 24px; font-weight: 600; }
+.title-main { font-size: 32px; font-weight: 800; display: block; opacity: 0.4; margin-top: -5px; }
+.browse-btn {
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    width: fit-content;
+}
+.card-earphone { background-color: #000000; color: white; }
+.card-earphone .browse-btn { color: #d32f2f; }
+.card-watch { background-color: #fbc02d; color: white; }
+.card-watch .browse-btn { color: #fbc02d; }
+.card-laptop { background-color: #d32f2f; color: white; }
+.card-laptop .browse-btn { color: #d32f2f; }
+.card-console { background-color: #eeeeee; color: #333; }
+.card-oculus { background-color: #8bc34a; color: white; }
+.card-speaker { background-color: #4285f4; color: white; }
+
+/*new launches*/
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+/* Base style for both images */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: absolute; /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+}
+
+/* The hover image is hidden by default */
+.hover-img {
+    opacity: 0;
+    z-index: 1;
+}
+
+.main-img {
+    opacity: 1;
+    z-index: 0;
+}
+
+/* Hover Logic */
+.prod-item-box:hover .hover-img {
+    opacity: 1; /* Reveal second image */
+    transform: scale(1.01); /* Zoom effect */
+}
+
+.prod-item-box:hover .main-img {
+    opacity: 0; /* Hide first image */
+    transform: scale(1.03); /* Keep zoom consistent */
+}
+.quick-buy {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+@media (max-width: 900px) {
+    .cat-grid-wrapper, .prod-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .cat-grid-wrapper, .prod-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.prod-item-box:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: left;
+     border: 1px solid #000;
+    border-radius: 12px;    
+    overflow: hidden;      
+    display: flex;
+    flex-direction: column;
+    background: ghostwhite;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 8px 0;
+}
+.product-price {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/*blogs*/
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    color: #8cc63f;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.main-title {
+    font-size: 38px;
+    font-weight: 800;
+    margin-top: 35px;
+}
+
+/* Grid Logic */
+.blog-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch; /* Makes all cards the same height */
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.blog-card {
+    background: #fff;
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column; /* Stack image and content */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Image Zoom Effect */
+.blog-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden; /* Clips the zoomed image */
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom duration */
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1); /* Slight zoom in */
+}
+
+/* Content Logic */
+.blog-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Makes the content area fill the card height */
+}
+
+.blog-meta {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.blog-meta .date {
+    color: #8cc63f;
+}
+
+.blog-meta .date strong {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.blog-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.blog-excerpt {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Pushes the "Read More" button to the bottom */
+}
+
+.read-more {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: auto; /* Final insurance to keep it at the bottom */
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #8cc63f;
+}
+
+.read-more i {
+    font-style: normal;
+    margin-left: 5px;
+}
+
+
+/*footer*/
+/* Including your requested base styles */
+
+
+
+/* Instagram Section - Negating body padding for zero side spaces */
+.instagram-section {
+    width: calc(100% + 40px); /* Offsets the 20px padding on each side of the body */
+    margin-left: -20px;       /* Pulls the section to the left edge */
+    margin-right: -20px;      /* Pulls the section to the right edge */
+    background-color: #fdfaf5;
+    text-align: center;
+    overflow: hidden;         /* Prevents horizontal scroll */
+}
+
+.section-title {
+    letter-spacing: 4px;
+    padding: 30px 0;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 38px;
+    font-weight: 800;
+    margin-top: 35px;
+}
+
+.instagram-grid {
+    display: flex;
+    width: 100%;
+    /* Ensures no gaps between images */
+    gap: 0;
+}
+
+.grid-item {
+    flex: 1;
+    aspect-ratio: 1 / 1; /* Force perfect square shape */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the square without stretching */
+    display: block;    /* Removes the small gap at the bottom of images */
+}
+
+
+
+/* Your original requested styles */
+
+
+.content { flex: 1; width: 100%; }
+
+/* Sticky Footer with No Space */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #888;
+    width: calc(100% + 40px);
+    margin: 0 -20px -40px -20px;
+    padding: 60px 50px 30px 50px;
+}
+
+/* Feature Boxes */
+.footer-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Feature Boxes */
+.feature-box {
+    border: 1px solid #333;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    transition: all 0.3s ease; /* Smooth transition for the color change */
+    cursor: pointer; /* Changes cursor to hand to show it's clickable */
+}
+
+/* New Hover Effect */
+.feature-box:hover {
+    background-color: #3498db; /* Blue background on hover */
+    border-color: #3498db;     /* Border matches the background */
+}
+
+/* Ensure text and icon change to white when box is blue */
+.feature-box:hover h4,
+.feature-box:hover p {
+    color: #ffffff !important;
+}
+
+/* Optional: If you want the icon to stay white or change,
+   the icons used (delivery, calendar, gift) are already white */
+.feature-box h4 { color: #fff; font-size: 15px; }
+
+/* Main Grid */
+.footer-main-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+.footer-col { flex: 1; padding: 0 15px; }
+
+/* Logo and Address Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.footer-logo {
+    height: 40px; /* Adjust based on your logo size */
+    width: auto;
+}
+.my-address {
+    margin-top: 20px;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* Other Column Styling */
+.footer-col h3 { color: #fff; font-size: 16px; margin-bottom: 20px; }
+.footer-col p, .footer-col li { font-size: 13px; line-height: 1.8; margin-bottom: 8px; list-style: none; }
+
+/* Email Group */
+.email-input-group {
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-top: 15px;
+}
+.email-input-group input { background: transparent; border: none; color: #fff; flex: 1; padding: 10px 0; outline: none; }
+.submit-btn { background: transparent; border: none; cursor: pointer; color: #3498db; font-size: 20px; }
+
+/* Bottom Bar */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    font-size: 12px;
+}
+.payment-icons img { height: 25px; background: #fff; padding: 2px; border-radius: 3px; margin-left: 5px; }
