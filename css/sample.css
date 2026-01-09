@@ -11,7 +11,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 /*header*/
 .header-container {
     background-color: #ffffff;
@@ -19,61 +18,51 @@ body {
     margin: -40px -20px 40px -20px;
    
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
     height: 80px;
     box-sizing: border-box;
     border-bottom: 1px solid #eeeeee;
 }
-
 .logo img {
-    height: 35px; 
+    height: 35px;
     width: auto;
 }
 .nav-group-right {
     display: flex;
     align-items: center;
-    gap: 45px; 
+    gap: 45px;
 }
-
 .nav-links {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
 }
-
 .nav-item {
     text-decoration: none;
-    color: #000; /* All links are now black */
+    color: #000; 
     font-weight: 600;
     font-size: 16px;
     font-family: 'Segoe UI', Arial, sans-serif;
     transition: color 0.3s ease;
 }
-
-/* Hover effect for all links including Home */
 .nav-item:hover {
-    color: #00ABEA; /* Subtle green change only on hover */
+    color: #00ABEA; 
 }
-
-/* Icons Section */
 .nav-icons {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 .icon-svg {
     width: 24px;
     height: 24px;
     cursor: pointer;
     stroke: #000;
 }
-
 .cart-container {
     position: relative;
 }
-
 .cart-count {
     position: absolute;
     top: -8px;
@@ -86,109 +75,91 @@ body {
     font-weight: bold;
 }
 /*carousel*/
-
 .banner {
     --banner-bg: #00ABEA;
     background-color: var(--banner-bg);
-   
-    /* Makes it full-width like the footer/header */
     width: calc(100% + 0px);
     margin-left: -20px;
     margin-right: -20px;
-
-    /* MOVE SMALL DOWN: Adjust this value to change the gap size */
     margin-top: 30px;
    
     height: 552px;
-    border-radius: 30px; /* Removing radius for a full-width 'footer' look */
+    border-radius: 30px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     padding: 0 60px;
-    color: white; /* Changed to white as per screenshot */
+    color: white; 
     overflow: visible;
 }
 .auto-swap-watch {
-    /* 1. Keep your existing floating animation */
-    /* 2. Add the imageSwap animation (12s total: 3 images x 4s each) */
     animation:
         floatLoop 4s ease-in-out infinite,
         imageSwap 12s step-end infinite;
 }
 
 @keyframes imageSwap {
-    /* Image 1 (0s to 4s) */
     0%, 33.32% {
         content: url("https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f44_ads1-1.avif");
     }
-    /* Image 2 (4s to 8s) */
     33.33%, 66.65% {
         content: url("https://i.ibb.co/Ldq7m9v/watch-removebg.png");
     }
-    /* Image 3 (8s to 12s) */
     66.66%, 100% {
-        content: url("https://i.ibb.co/6883pY6/watch-black.png"); /* Example 3rd watch */
+        content: url("https://i.ibb.co/6883pY6/watch-black.png");
     }
 }
-
-/* Ensure the floating animation stays the same */
 @keyframes floatLoop {
     0% { transform: translate3d(0px, -20px, 0px); }
     25% { transform: translate3d(0px, 15px, 0px); }
     100% { transform: translate3d(0px, -20px, 0px); }
 }
-/* Ensure the watch container doesn't get clipped by the gap */
-
-        /* Left Side */
-        .left-side {
-            flex: 1.2;
-            padding-left: 10px;
-        }
-
-        .left-side .percent {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .left-side h1 {
-            font-size: 105px;
-            line-height: 0.85;
-            margin: 0;
-            font-weight: 900;
-            letter-spacing: -2px;
-        }
-
-        .left-side .date {
-            margin-top: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        /* Center Watch */
-       .watch-container {
+.left-side {
+    flex: 1.2;
+    padding-left: 30px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Arial Black', sans-serif; 
+}
+.left-side .percent {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.left-side h1 {
+    font-size: 75px;
+    line-height: 0.85; 
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -3px;
+    text-transform: uppercase; 
+}
+.left-side .date {
+    margin-top: 35px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+    .watch-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
 }
-
-
-      /* Updated Animation and Image Styling */
 .watch-image {
     width: 667px;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
     position: relative;
     top: -105px;
     animation: floatLoop 4s ease-in-out infinite;
-   
-    /* ADD THIS LINE for smooth image swapping */
     transition: opacity 0.3s ease-in-out;
 }
-
-#carousel-watch{
-
+#carousel-watch .active{
+    display: block;
 }
 .left_arrow, .right_arrow{
     font-size: 80px;
@@ -198,6 +169,7 @@ body {
     width: 2%;
     border-radius: 100%;
     border: 2px solid #00ABEA;
+    cursor: pointer;
 }
 .left_arrow p, .right_arrow p{
     margin-top: -2rem;
@@ -212,25 +184,20 @@ body {
     align-content: flex-end;
     right: -10px;
 }
-/* #carousel-watch{
+#carousel-watch{
     box-shadow: 20px 30px 40px rgb(224, 224, 224);
-} */
+}
 @keyframes floatLoop {
     0% {
-        /* Start at -20px (Higher up) */
         transform: translate3d(0px, -20px, 0px);
     }
     50% {
-        /* Drop down slightly to 0px */
         transform: translate3d(0px, 10px, 0px);
     }
     100% {
-        /* Return to -20px */
         transform: translate3d(0px, -20px, 0px);
     }
 }
-
-        /* Right Side */
         .right-side {
             flex: 1;
             padding-right: 10px;
@@ -257,8 +224,8 @@ body {
     display: inline-block;
     margin-top: 25px;
     padding: 12px 30px;
-    background-color: #ffffff; /* White button to pop against green */
-    color: #00ABEA; /* Green text to match banner */
+    background-color: #ffffff; 
+    color: #00ABEA; 
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
@@ -267,12 +234,11 @@ body {
     transition: all 0.3s ease;
     border: 2px solid #ffffff;
 }
-/* Navigation Buttons */
 .banner-nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px; /* Small circle size */
+    width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #ffffff;
@@ -285,30 +251,24 @@ body {
     z-index: 100;
     transition: all 0.3s ease;
 }
-
 .banner-nav-btn:hover {
     background-color: #ffffff;
-    color: #00ABEA; /* Arrow turns green on hover */
+    color: #00ABEA;
 }
-
 .banner-nav-btn svg {
     width: 18px;
     height: 18px;
 }
-
 .prev { left: 15px; }
 .next { right: 15px; }
-
-/* Ensure the image can fade smoothly */
 .watch-image {
     transition: opacity 0.3s ease-in-out;
 }
 .shop-now-btn:hover {
     background-color: transparent;
     color: #ffffff;
-    transform: translateY(-3px); /* Subtle lift on hover */
+    transform: translateY(-3px); 
 }
-       
 .heading{
     justify-content: center;
     align-items: center;
@@ -358,10 +318,26 @@ body {
 .cat-item-card:hover img {
     transform: scale(1.1);
 }
-.card-content { z-index: 2; }
-.label { font-size: 14px; margin-bottom: 5px; display: block; }
-.title-top { font-size: 24px; font-weight: 600; }
-.title-main { font-size: 32px; font-weight: 800; display: block; opacity: 0.4; margin-top: -5px; }
+.card-content { 
+    z-index: 2; 
+}
+.label { 
+    font-size: 14px; 
+    margin-bottom: 5px; 
+    display: block; 
+}
+.title-top { 
+    font-size: 24px; 
+    font-weight: 600;
+}
+.title-main { 
+    font-size: 32px; 
+    font-weight: 800; 
+    display: block; 
+    opacity: 0.4;
+    margin-top: -5px;
+    color: black;
+}
 .browse-btn {
     margin-top: 25px;
     padding: 10px 20px;
@@ -373,56 +349,50 @@ body {
     cursor: pointer;
     width: fit-content;
 }
-.card-earphone { background-color: #000000; color: white; }
-.card-earphone .browse-btn { color: #d32f2f; }
-.card-watch { background-color: #fbc02d; color: white; }
-.card-watch .browse-btn { color: #fbc02d; }
-.card-laptop { background-color: #d32f2f; color: white; }
-.card-laptop .browse-btn { color: #d32f2f; }
-.card-console { background-color: #eeeeee; color: #333; }
-.card-oculus { background-color: #00ABEA; color: white; }
-.card-speaker { background-color: #4285f4; color: white; }
+.card-earphone { background-color: #b9e8ff; color: black; }
+.card-earphone .browse-btn { color: black; }
+.card-watch { background-color:  #9EDBFF ; color: black; }
+.card-watch .browse-btn { color: black; }
+.card-laptop { background-color: #0088CC ; color: black; }
+.card-laptop .browse-btn { color: black; }
+.card-console { background-color: #878fc1; color: #333; }
+.card-oculus { background-color: #6b61c2 ; color: black; }
+.card-speaker { background-color: #5450a7; color: black; }
 
 /*new launches*/
 .image-container {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Base style for both images */
 .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    position: absolute; /* Stack images on top of each other */
-    top: 0;
-    left: 0;
+  width: 100%;
+  display: block;
 }
 
-/* The hover image is hidden by default */
 .hover-img {
-    opacity: 0;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-container:hover .hover-img {
+  opacity: 1;
 }
 
 .main-img {
     opacity: 1;
     z-index: 0;
 }
-
-/* Hover Logic */
 .prod-item-box:hover .hover-img {
-    opacity: 1; /* Reveal second image */
-    transform: scale(1.01); /* Zoom effect */
+    opacity: 1;
+    transform: scale(1.01); 
 }
-
 .prod-item-box:hover .main-img {
-    opacity: 0; /* Hide first image */
-    transform: scale(1.03); /* Keep zoom consistent */
+    opacity: 0; 
+    transform: scale(1.03); 
 }
 .quick-buy {
     position: absolute;
@@ -447,12 +417,9 @@ body {
         grid-template-columns: 1fr;
     }
 }
-
-
 .prod-item-box:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
 .image-container {
     position: relative;
     width: 100%;
@@ -460,7 +427,6 @@ body {
     overflow: hidden;
     background-color: #f9f9f9;
 }
-
 .product-info {
     padding: 15px;
     text-align: left;
@@ -472,7 +438,6 @@ body {
     background: ghostwhite;
     transition: box-shadow 0.3s ease;
 }
-
 .product-title {
     font-size: 18px;
     font-weight: 400;
@@ -484,79 +449,63 @@ body {
     font-size: 16px;
     margin-top: 5px;
 }
-
 /*blogs*/
-
 .container {
     max-width: 1140px;
     margin: 0 auto;
 }
-
 .section-header {
     text-align: center;
     margin-bottom: 50px;
 }
-
 .sub-title {
     color: #00ABEA;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
-
 .main-title {
     font-size: 38px;
     font-weight: 800;
     margin-top: 35px;
 }
-
-/* Grid Logic */
 .blog-grid {
     display: flex;
     gap: 30px;
     justify-content: center;
-    align-items: stretch; /* Makes all cards the same height */
+    align-items: stretch;
     flex-wrap: wrap;
 }
-
-/* Card Styling */
 .blog-card {
     background: #fff;
     flex: 1;
     min-width: 320px;
     display: flex;
-    flex-direction: column; /* Stack image and content */
+    flex-direction: column;
     box-shadow: 0 5px 25px rgba(0,0,0,0.05);
     border-radius: 4px;
     overflow: hidden;
 }
-
-/* Image Zoom Effect */
 .blog-image {
     width: 100%;
     height: 240px;
-    overflow: hidden; /* Clips the zoomed image */
+    overflow: hidden; 
 }
-
 .blog-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Smooth zoom duration */
+    transition: transform 0.5s ease;
 }
-
 .blog-card:hover .blog-image img {
-    transform: scale(1.1); /* Slight zoom in */
+    transform: scale(1.1); 
 }
-
-/* Content Logic */
 .blog-content {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Makes the content area fill the card height */
+    flex-grow: 1; 
 }
-
 .blog-meta {
     font-size: 13px;
     color: #777;
@@ -565,29 +514,25 @@ body {
     align-items: center;
     gap: 12px;
 }
-
 .blog-meta .date {
     color: #00ABEA;
 }
-
 .blog-meta .date strong {
     font-size: 26px;
     font-weight: 700;
 }
-
 .blog-title {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
     line-height: 1.3;
 }
-
 .blog-excerpt {
     font-size: 14px;
     color: #666;
     line-height: 1.6;
     margin-bottom: 25px;
-    flex-grow: 1; /* Pushes the "Read More" button to the bottom */
+    flex-grow: 1; 
 }
 
 .read-more {
@@ -595,35 +540,18 @@ body {
     color: #000;
     font-size: 14px;
     font-weight: 700;
-    margin-top: auto; /* Final insurance to keep it at the bottom */
+    margin-top: auto; 
     transition: color 0.3s;
 }
-
 .read-more:hover {
     color: #00ABEA;
 }
-
 .read-more i {
     font-style: normal;
     margin-left: 5px;
 }
-
-
 /*footer*/
-/* Including your requested base styles */
-
-
-
-/* Instagram Section - Negating body padding for zero side spaces */
-.instagram-section {
-    width: calc(100% + 40px); /* Offsets the 20px padding on each side of the body */
-    margin-left: -20px;       /* Pulls the section to the left edge */
-    margin-right: -20px;      /* Pulls the section to the right edge */
-    background-color: #fdfaf5;
-    text-align: center;
-    overflow: hidden;         /* Prevents horizontal scroll */
-}
-
+/* 2. Title Styling */
 .section-title {
     letter-spacing: 4px;
     padding: 30px 0;
@@ -632,27 +560,14 @@ body {
     font-size: 38px;
     font-weight: 800;
     margin-top: 35px;
+    margin-bottom: 0;
 }
 
-.instagram-grid {
-    display: flex;
-    width: 100%;
-    /* Ensures no gaps between images */
-    gap: 0;
-}
 
-.grid-item {
-    flex: 1;
-    aspect-ratio: 1 / 1; /* Force perfect square shape */
+/* 6. Footer Flush Fix */
+footer, .footer {
+    margin-top: 0 !important;
 }
-
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills the square without stretching */
-    display: block;    /* Removes the small gap at the bottom of images */
-}
-
 
 
 /* Your original requested styles */
@@ -662,7 +577,7 @@ body {
 
 /* Sticky Footer with No Space */
 .main-footer {
-    background-color: #1a1a1a;
+    background-color: #0f022e;
     color: #888;
     width: calc(100% + 40px);
     margin: 0 -20px -40px -20px;
@@ -670,76 +585,147 @@ body {
 }
 
 /* Feature Boxes */
-.footer-features {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 50px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Feature Boxes */
-.feature-box {
-    border: 1px solid #333;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex: 1;
-    transition: all 0.3s ease; /* Smooth transition for the color change */
-    cursor: pointer; /* Changes cursor to hand to show it's clickable */
+
+.newsletter{
+    width:100%;
+    min-height:280px;
+    background:#0f022e;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
 }
 
-/* New Hover Effect */
-.feature-box:hover {
-    background-color: #3498db; /* Blue background on hover */
-    border-color: #3498db;     /* Border matches the background */
+.newsletter h2{
+    font-size:18px;
+    letter-spacing:2px;
+    font-weight:600;
+    color:white;
+    margin-bottom:12px;
 }
 
-/* Ensure text and icon change to white when box is blue */
-.feature-box:hover h4,
-.feature-box:hover p {
-    color: #ffffff !important;
+.newsletter p{
+    font-size:13px;
+    color:white;
+    margin-bottom:10px;
 }
 
-/* Optional: If you want the icon to stay white or change,
-   the icons used (delivery, calendar, gift) are already white */
-.feature-box h4 { color: #fff; font-size: 15px; }
+.error{
+    font-size:11px;
+    color:#9b3b3b;
+    margin-bottom:10px;
+}
 
-/* Main Grid */
-.footer-main-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
+.email-box{
+    display:flex;
+    width:360px;
+    max-width:100%;
+    border:1px solid #ddd;
+    background:white;
+    text-align: center;
+    justify-content: center;
+
+    /* 👇 center it */
     margin: 0 auto;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #333;
 }
-.footer-col { flex: 1; padding: 0 15px; }
 
-/* Logo and Address Styling */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+.signup-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding-bottom: 65px;
 }
-.footer-logo {
-    height: 40px; /* Adjust based on your logo size */
-    width: auto;
+
+.email-box input{
+    flex:1;
+    border:none;
+    padding:12px 14px;
+    outline:none;
+    font-size:13px;
 }
+
+.email-box button{
+    background:#1f2b1f;
+    color:white;
+    border:none;
+    padding:0 24px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
+    cursor:pointer;
+    text-align: center;
+}
+
+.email-box button:hover{
+    background:#000;
+}
+
+.footer{
+    width:100%;
+    background:#0f022e;
+    padding:60px 0 20px 0;
+}
+
+/* FULL WIDTH BAR */
+.footer-main-content{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 5%;
+    padding-bottom:40px;
+    border-bottom:1px solid #333;
+}
+
+/* Columns */
+.footer-col{
+    flex:1;
+    padding:0 15px;
+    cursor: pointer;
+}
+
+/* Bottom bar */
+.footer-bottom{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 5%;
+    font-size:12px;
+}
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.footer-logo{
+    max-height:40px;
+    max-width:140px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
 .my-address {
     margin-top: 20px;
     color: #bbb;
     line-height: 1.6;
 }
-
-/* Other Column Styling */
-.footer-col h3 { color: #fff; font-size: 16px; margin-bottom: 20px; }
-.footer-col p, .footer-col li { font-size: 13px; line-height: 1.8; margin-bottom: 8px; list-style: none; }
-
-/* Email Group */
+.footer-col h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.footer-col p, .footer-col li {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    list-style: none;
+}
 .email-input-group {
     display: flex;
     border-bottom: 1px solid #333;
@@ -747,13 +733,10 @@ body {
 }
 .email-input-group input { background: transparent; border: none; color: #fff; flex: 1; padding: 10px 0; outline: none; }
 .submit-btn { background: transparent; border: none; cursor: pointer; color: #3498db; font-size: 20px; }
-
-/* Bottom Bar */
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 20px auto 0 auto;
-    font-size: 12px;
-}
 .payment-icons img { height: 25px; background: #fff; padding: 2px; border-radius: 3px; margin-left: 5px; }
+.bottom-links{
+    cursor: pointer;
+}
+.middle{
+    text-align: center;
+}
