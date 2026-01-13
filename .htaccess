@@ -1,0 +1,13 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Base path for main avyona folder
+RewriteBase /waterberry
+
+# Skip existing files/folders
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Allow .php-less URLs
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
