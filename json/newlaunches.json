@@ -1,0 +1,38 @@
+[
+  {
+    "image": "https://m.media-amazon.com/images/I/612k3CGhnUL._SX679_.jpg",
+    "hoverImage": "https://m.media-amazon.com/images/I/61L7q4SjF7L._SX679_.jpg",
+    "title": "Wireless Headphones",
+    "price": 2499
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51rceM8s5gL._SX679_.jpg",
+    "hoverImage": "https://m.media-amazon.com/images/I/51Tn4gwGyJL._SX679_.jpg",
+    "title": "Smart Watch",
+    "price": 3999
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61yugUd3fxL._SX679_.jpg",
+    "hoverImage": "https://m.media-amazon.com/images/I/71Fa6G4oenL._SX679_.jpg",
+    "title": "Bluetooth Speaker",
+    "price": 1799
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61A6zz9r49L._SX679_.jpg",
+    "hoverImage": "https://m.media-amazon.com/images/I/61B7rZ6L-JL._SX679_.jpg",
+    "title": "Gaming Mouse",
+    "price": 1299
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61WRloz+86L._SX679_.jpg",
+    "hoverImage": "https://m.media-amazon.com/images/I/71gl3W3epzL._SX679_.jpg",
+    "title": "Mechanical Keyboard",
+    "price": 4599
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61v0Eou-bcL._SX679_.jpg",
+    "hoverImage": "https://m.media-amazon.com/images/I/71H+WrmdNuL._SX679_.jpg",
+    "title": "USB-C Fast Charger",
+    "price": 999
+  }
+]
