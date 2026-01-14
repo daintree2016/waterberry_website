@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <footer class="main-footer">
     <section class="middle">
     <h2>BRIGHTEN UP YOUR INBOX</h2><br>
     <p>Join our email list for new product releases, endless inspiration, and 10% off your next order.</p><br>
+
     <span class="error">email - can't be blank</span><br><br>
+
+  
 <div class="signup-wrap">
     <div class="email-box">
         <input type="email" placeholder="your-email@example.com">
         <button>SIGN UP</button>
     </div>
 </div>
+<div class="custom-divider">
+  <div class="accent-bar"></div>
+</div>
+<br>
+<br>
 </section>
     <div class="content">
     </div>
@@ -26,7 +35,7 @@
         <div class="footer-col brand-col">
             <div class="logo-container">
     <div class="logo-box">
-        <img src="waterberry logo.png" class="footer-logo">
+        <img src="images/waterberry logo.png" class="footer-logo">
     </div>
 </div>
             <div class="my-address">
@@ -35,6 +44,7 @@
                 <p> Visakhapatnam, ZIP 530041</p>
             </div>
         </div>
+       
         <div class="footer-col">
             <h3>Our collection</h3>
             <p>Home</p>
@@ -43,6 +53,7 @@
             <p>Contact us</p>
             <p>About</p>
         </div>
+
         <div class="footer-col">
             <h3>Social media</h3>
             <ul>
