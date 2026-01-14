@@ -1,0 +1,22 @@
+{
+  "carousel": [
+    {
+      "sale": "Winter sale 20% off",
+      "image": "https://github.com/daintree2016/waterberry_website/blob/main/images/2.png?raw=true",
+      "heading": "Product description",
+      "description": "Up to 50% off all puffer jackets, wool scarves, and winter boots to clear out seasonal inventory."
+    },
+    {
+      "sale": "Winter sale",
+      "image": "https://jbtek.in/wp-content/uploads/2023/06/JB-EP225-e1685619026609-430x430.png",
+      "heading": "Product description",
+      "description": "Exclusive weekend deals on smart home devices, wireless earbuds, and 4K monitors."
+    },
+    {
+      "sale": "Winter sale",
+      "image": "https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-trendy-smartwatch-with-notifications-and-apps-png-image_14218279.png",
+      "heading": "Product description",
+      "description": "Transform your living space with 20% off all mid-century modern furniture and organic cotton bedding."
+    }
+  ]
+}
