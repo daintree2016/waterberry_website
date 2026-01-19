@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php include("header.php") ?>
+<?php include("header") ?>
 
   <div id="newsletterModal" class="modal-overlay">
     <div class="modal-container">
@@ -53,21 +53,25 @@
         </div>    
 
     <div class="right-side">
-        <a href="#" class="shop-now-btn">Shop Now</a>
+        <div class="desc_part">
+
+        </div>
+        <a href="product" class="shop-now-btn">Shop Now</a>         
     </div>
 
 </div>
     <h2 class="heading">Categories</h2>
     <div class="cat-grid-wrapper">
-        <div class="cat-item-card card-earphone">
-            <div class="card-content">
-                <span class="label">Enjoy</span>
-                <span class="title-top">With</span>
-                <span class="title-main">Earphone</span>
-                <button class="browse-btn">BROWSE</button>
-            </div>
-            <img src="https://jbtek.in/wp-content/uploads/2023/06/JB-EP225-e1685619026609-430x430.png" alt="Earphone">
+        <a href="collection" class="cat-item-card card-earphone" style="text-decoration: none; display: block;">
+        <div class="card-content">
+            <span class="label">Enjoy</span>
+            <span class="title-top">With</span>
+            <span class="title-main">Earphone</span>
+            <button class="browse-btn">BROWSE</button>
         </div>
+        <img src="https://jbtek.in/wp-content/uploads/2023/06/JB-EP225-e1685619026609-430x430.png" alt="Earphone">
+    </a>
+    
         <div class="cat-item-card card-watch">
             <div class="card-content">
                 <span class="label">New</span>
@@ -138,6 +142,7 @@
     </div>
  
 <section class="blog-section">
+    
     <div class="container">
         <div class="section-header">
             <h2 class="main-title">Latest Blogs</h2>
@@ -151,10 +156,11 @@
                 <div class="blog-content">
                     <div class="blog-meta">
                         <span class="date"><strong>14</strong> Nov 2024</span>
+
                     </div>
-                    <h3 class="blog-title">Reasons to Upgrade Your Smartphone</h3>
-                    <p class="blog-excerpt">Get better cameras, faster speeds, and improved security. Upgrade for smoother, more efficient use.</p>
-                    <a href="#" class="read-more">Read More <i class="arrow">›</i></a>
+                    <h3 class="blog-title">Top Electronics You Should Have at Home (2026 Edition)</h3>
+                    <p class="blog-excerpt">Whether you're upgrading your home setup or buying new devices, here’s a complete guide to the top electronics every home should have in 2026.</p>
+                    <a href="blog1" class="read-more">Read More <i class="arrow">›</i></a>
                 </div>
             </article>
 
@@ -166,9 +172,9 @@
                     <div class="blog-meta">
                         <span class="date"><strong>27</strong> Oct 2024</span>
                     </div>
-                    <h3 class="blog-title">Laptop vs. MacBook: A Quick Guide</h3>
+                    <h3 class="blog-title">Technology Hack You Won't Get</h3>
                     <p class="blog-excerpt">Laptops offer flexibility; MacBooks provide seamless integration. Pick based on budget and tech needs.</p>
-                    <a href="#" class="read-more">Read More <i class="arrow">›</i></a>
+                    <a href="blog2" class="read-more">Read More <i class="arrow">›</i></a>
                 </div>
             </article>
 
@@ -180,9 +186,9 @@
                     <div class="blog-meta">
                         <span class="date"><strong>15</strong> Oct 2024</span>
                     </div>
-                    <h3 class="blog-title">The Case for Wireless Headphones</h3>
+                    <h3 class="blog-title">Top 10 Small Camera In The World</h3>
                     <p class="blog-excerpt">Enjoy tangle-free audio, portability, and great sound quality. Wireless is the future of listening.</p>
-                    <a href="#" class="read-more">Read More <i class="arrow">›</i></a>
+                    <a href="blog3" class="read-more">Read More <i class="arrow">›</i></a>
                 </div>
             </article>
         </div>
@@ -193,13 +199,14 @@
   <div class="about-container">
     <h2 class="about-title">ABOUT US</h2>
     <p class="about-text">
-    Waterberry is a modern online electronics store offering a curated range of smart gadgets, accessories, home tech, and innovative digital products for everyday living.
+    Waterberry is a modern online electronics destination offering a carefully curated range of smart gadgets, accessories, home tech, 
+    and innovative digital products for a smarter, more effortless lifestyle. We focus on quality, design, and functionality to bring you everyday tech that fits seamlessly into modern living.
   </div>
 </section>
 <br>
 <br>
 
-<?php include("footer.php") ?>
+<?php include("footer") ?>
 <script>
 let carouselSlides = [];
 let carouselPosition = 0;
@@ -207,7 +214,7 @@ let carouselTimer = null;
 async function get_carousel() {
     const watchContainer = document.querySelector(".watch-container");
     const leftSide = document.querySelector(".left-side");
-    const rightSide = document.querySelector(".right-side");
+    const rightSide = document.querySelector(".desc_part");
     try {
         const response = await fetch('./carousel.json');
         if (response.status === 200) {
@@ -225,7 +232,6 @@ async function get_carousel() {
                 `;
                 rightSide.innerHTML = `
                     <p class="desc-only">${currentItem.description}</p>
-                    <a href="#" class="shop-now-btn">Shop Now</a>
                 `;
                 carouselPosition =
                     (carouselPosition + 1) % carouselSlides.length;
@@ -252,14 +258,13 @@ document.querySelector(".right_arrow").addEventListener("click", () => {
 });
 function manualUpdate() {
     const watchContainer = document.querySelector(".watch-container");
-    const rightSide = document.querySelector(".right-side");
+    const rightSide = document.querySelector(".desc_part");
     const item = carouselSlides[carouselPosition];
     watchContainer.innerHTML = `
         <img src="${item.image}" class="watch-image">
     `;
     rightSide.innerHTML = `
         <p class="desc-only">${item.description}</p>
-        <a href="#" class="shop-now-btn">Shop Now</a>
     `;
     carouselTimer = setTimeout(() => {
         carouselPosition =
