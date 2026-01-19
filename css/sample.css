@@ -234,6 +234,7 @@ body {
     border-radius: 5px;
     transition: all 0.3s ease;
     border: 2px solid #ffffff;
+    order: 0;
 }
 .banner-nav-btn {
     position: absolute;
