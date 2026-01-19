@@ -1,0 +1,182 @@
+*{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Poppins',sans-serif;
+    }
+    body{
+        background:#fff;
+        color:#333;
+    }
+    .blog-wrap{
+        max-width:920px;
+        margin:50px auto;
+        padding:0 20px;
+    }
+    h1{
+        font-size:28px;
+        font-weight:600;
+        text-align:center;
+        margin-bottom:8px;
+    }
+    .intro-title{
+        font-size:18px;
+        font-weight:500;
+        margin:30px 0 10px;
+    }
+    p{
+        font-size:14px;
+        line-height:1.9;
+        color:black;
+        margin-bottom:16px;
+    }
+    .para{
+             line-height:1.0;
+    }
+    h2{
+        font-size:20px;
+        font-weight:600;
+        margin:30px 0 10px;
+    }
+    h3{
+        font-size:16px;
+        font-weight:600;
+        margin:22px 0 6px;
+    }
+    ul{
+        padding-left:18px;
+        margin:10px 0 20px;
+    }
+    ul li{
+        font-size:14px;
+        color:#555;
+        line-height:1.8;
+        margin-bottom:6px;
+    }
+    .best-for{
+        font-size:14px;
+        font-weight:500;
+        color:#222;
+        margin-top:10px;
+    }
+    .note{
+        font-size:13px;
+        color:black;
+        margin:12px 0 20px
+    }
+    .faq h3{
+        margin-top:18px;
+    }
+    .divider{
+        height:1px;
+        background:#eee;
+        margin:30px 0;
+    }
+    .img{
+        max-width: 850px;
+    }
+    @media(max-width:600px){
+        h1{font-size:24px}.blog-wrap{margin:30px auto}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Poppins',sans-serif;
+    }
+    body{
+        background:#fff;
+        color:#333;
+    }
+    .blog-wrap{
+        max-width:920px;
+        margin:50px auto;
+        padding:0 20px;
+    }
+    h1{
+        font-size:28px;
+        font-weight:600;
+        text-align:center;
+        margin-bottom:8px;
+    }
+    .intro-title{
+        font-size:18px;
+        font-weight:500;
+        margin:30px 0 10px;
+    }
+    p{
+        font-size:14px;
+        line-height:1.9;
+        color:#555;
+        margin-bottom:16px;
+    }
+    h2{
+        font-size:20px;
+        font-weight:600;
+        margin:30px 0 10px;
+    }
+    h3{
+        font-size:16px;
+        font-weight:600;
+        margin:22px 0 6px;
+    }
+    ul{
+        padding-left:18px;
+        margin:10px 0 20px;
+    }
+    ul li{
+        font-size:14px;
+        color:#555;
+        line-height:1.8;
+        margin-bottom:6px;
+    }
+    .best-for{
+        font-size:14px;
+        font-weight:500;
+        color:#222;
+        margin-top:10px;
+    }
+    .note{
+        font-size:13px;
+        color:#666;
+        margin:12px 0 20px
+    }
+    .faq h3{
+        margin-top:18px;
+    }
+    .divider{
+        height:1px;
+        background:#eee;
+        margin:30px 0;
+    }
+    .img{
+        max-width: 850px;
+    }
+    @media(max-width:600px){
+        h1{font-size:24px}.blog-wrap{margin:30px auto}}

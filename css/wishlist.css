@@ -1,0 +1,117 @@
+
+
+
+
+/* Centering and Side Spacing */
+.wishlist-container {
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the whole block */
+    background: white;
+    border: 1px solid #eee;
+}
+
+.wishlist-title {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    background-color: #fdfdfd;
+}
+
+.wishlist-content {
+    padding: 0 20px;
+}
+
+/* Flex Grid Layout */
+.wishlist-header, .product-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.wishlist-header {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Column Widths */
+
+.col-product { flex: 2; display: flex; align-items: center; gap: 15px; }
+.col-qty { flex: 1; text-align: center; }
+.col-price { flex: 1; text-align: center; }
+.col-stock { flex: 1; text-align: center; }
+.col-action { flex: 1.5; text-align: right; }
+
+/* Product Info */
+.product-info .name { font-size: 14px; font-weight: 500; }
+
+/* Quantity Box */
+.qty-box {
+    display: inline-flex;
+    border: 1px solid #ddd;
+    align-items: center;
+}
+.qty-box button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #999;
+}
+.qty-box span {
+    padding: 0 10px;
+    font-size: 13px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* Pricing */
+.old-price { text-decoration: line-through; color: #999; margin-right: 5px; font-size: 13px; }
+.new-price { color: #f28b82; font-weight: bold; font-size: 13px; }
+
+/* Stock */
+.in-stock { color: #57a06f; font-size: 13px; font-weight: 500; }
+
+/* Actions */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.action-buttons button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+.btn-cart {
+    background: #1a1a1a !important;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px !important;
+}
+
+/* Product Image Styling */
+.col-product img {
+    width: 60px;          /* Set fixed width */
+    height: 60px;         /* Set fixed height */
+    object-fit: contain;  /* Keeps image aspect ratio without stretching */
+    background: #fdfdfd;  /* Light background in case image is transparent */
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+}
+
+/* Hover effect for the row to make it feel premium */
+.product-row {
+    transition: background 0.3s ease;
+}
+
+.product-row:hover {
+    background-color: #fafafa;
+}
