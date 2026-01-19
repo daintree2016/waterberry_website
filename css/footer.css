@@ -1,0 +1,212 @@
+
+/*footer*/
+/* 2. Title Styling */
+.section-title {
+    letter-spacing: 4px;
+    padding: 30px 0;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 38px;
+    font-weight: 800;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+
+/* 6. Footer Flush Fix */
+footer, .footer {
+    margin-top: 0 !important;
+}
+
+
+/* Your original requested styles */
+
+
+.content { flex: 1; width: 100%; }
+
+/* Sticky Footer with No Space */
+.main-footer {
+    background-color: #3D3F84;
+    color: white;
+    width: calc(100% + 40px);
+    margin: 0 -20px -40px -20px;
+    padding: 60px 50px 30px 50px;
+}
+
+/* Feature Boxes */
+
+.newsletter{
+    width:100%;
+    min-height:280px;
+    background:#0f022e;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.newsletter h2{
+    font-size:18px;
+    letter-spacing:2px;
+    font-weight:600;
+    color:white;
+    margin-bottom:12px;
+}
+
+.newsletter p{
+    font-size:13px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.error{
+    font-size:11px;
+    color:#ffff;
+    margin-bottom:10px;
+}
+
+.email-box{
+    display:flex;
+    width:360px;
+    max-width:100%;
+    border:1px solid #ddd;
+    background:black;
+    text-align: center;
+    justify-content: center;
+
+    /* 👇 center it */
+    margin: 0 auto;
+}
+
+.signup-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding-bottom: 65px;
+}
+
+.email-box input{
+    flex:1;
+    border:none;
+    padding:12px 14px;
+    outline:none;
+    font-size:13px;
+}
+
+.email-box button{
+    color:black;
+    background-color: white;
+    border:none;
+    padding:0 24px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
+    cursor:pointer;
+    text-align: center;
+}
+
+.email-box button:hover{
+    background:#000;
+    color: white;
+}
+
+.footer{
+    width:100%;
+    background:#0f022e;
+    padding:60px 0 20px 0;
+}
+
+/* FULL WIDTH BAR */
+.footer-main-content{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 5%;
+    padding-bottom:40px;
+    border-bottom:1px solid #333;
+}
+
+/* Columns */
+.footer-col{
+    flex:1;
+    padding:0 15px;
+    cursor: pointer;
+}
+
+/* Bottom bar */
+.footer-bottom{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 5%;
+    font-size:12px;
+}
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.footer-logo{
+    max-height:40px;
+    max-width:140px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
+.my-address {
+    margin-top: 20px;
+    color: #ffff;
+    line-height: 1.6;
+}
+.footer-col h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.footer-col p, .footer-col li {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    list-style: none;
+}
+.email-input-group {
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-top: 15px;
+}
+.email-input-group input { 
+    border: none; 
+    background: transparent;
+    color: black;
+    flex: 1; 
+    padding: 10px 0; 
+    outline: none; 
+}
+.submit-btn { 
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    color: #3498db; 
+    font-size: 20px; 
+}
+.payment-icons img { height: 25px; background: #fff; padding: 2px; border-radius: 3px; margin-left: 5px; }
+.bottom-links{
+    cursor: pointer;
+}
+.middle{
+    text-align: center;
+}
+.line {
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+  background: rgb(210, 210, 238);
+  margin-bottom: 60px;
+}
