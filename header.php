@@ -15,22 +15,22 @@
 
     <div class="nav-group-right">
         <nav class="nav-links">
-            <a href="index" class="nav-item">Home</a>
-            <a href="about" class="nav-item">About us</a>
+            <a href="index.php" class="nav-item">Home</a>
+            <a href="about.php" class="nav-item">About us</a>
             <a href="#" class="nav-item">Products</a>
             <a href="blog1.php" class="nav-item">Blogs</a>
-            <a href="contact" class="nav-item">Contact us</a>
+            <a href="contact.php" class="nav-item">Contact us</a>
         </nav>
 
-        
+       
 <div class="nav-icons">
-    <a href="wishlist" class="icon-link" title="Wishlist">
+    <a href="wishlist.php" class="icon-link" title="Wishlist">
         <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
         </svg>
     </a>
 
-    <a href="cart" class="icon-link" title="Shopping Cart">
+    <a href="cart.php" class="icon-link" title="Shopping Cart">
         <div class="cart-container">
             <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="9" cy="21" r="1"></circle>
@@ -41,21 +41,84 @@
         </div>
     </a>
 
-    <a href="signup" class="icon-link" title="My Account">
+    <a href="signup.php" class="icon-link" title="My Account">
         <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
         </svg>
     </a>
 
-    <a href="index" class="icon-link" title="Search">
-        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-    </a>
+   <button class="search-btn" id="searchBtn">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+</button>
+    <!-- SEARCH DROPDOWN -->
+<div class="search-overlay" id="searchOverlay"></div>
+
+<div class="search-side-panel" id="searchSidePanel">
+    <div class="search-panel-header">
+        <h3>Search Our Store</h3>
+        <button id="closeSearch" class="close-btn">&times;</button>
+    </div>
+    <div class="search-panel-body">
+        <!-- <input type="text" placeholder="Type to search..." id="searchInput" /> -->
+        <!-- <div class="search-results">
+            </div> -->
+    </div>
+
+    <div class="search-container">
+    <div class="input-wrapper">
+        <input type="text" id="searchInput" placeholder="Type to search...">
+    </div>
+    <button type="button" id="submitSearch" class="search-action-btn">Search</button>
+</div>
+</div>
 </div>
     </div>
 </header>
+<script>
+const searchBtn = document.getElementById("searchBtn");
+const searchSidePanel = document.getElementById("searchSidePanel");
+const searchOverlay = document.getElementById("searchOverlay");
+const closeSearch = document.getElementById("closeSearch");
+const searchInput = document.getElementById("searchInput");
+
+// Function to open panel
+searchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    searchSidePanel.classList.add("active");
+    searchOverlay.classList.add("active");
+    setTimeout(() => searchInput.focus(), 400); // Focus after slide finishes
+});
+
+// Function to close panel
+const hideSearch = () => {
+    searchSidePanel.classList.remove("active");
+    searchOverlay.classList.remove("active");
+};
+
+closeSearch.addEventListener("click", hideSearch);
+searchOverlay.addEventListener("click", hideSearch);
+document.getElementById("submitSearch").addEventListener("click", function() {
+    const query = document.getElementById("searchInput").value;
+   
+    if (query.trim() !== "") {
+        // Redirects to your search page with the query
+        window.location.href = "search.php?query=" + encodeURIComponent(query);
+    } else {
+        alert("Please enter a search term.");
+    }
+});
+
+// Also allow the "Enter" key to trigger the search
+document.getElementById("searchInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("submitSearch").click();
+    }
+});
+</script>
 </body>
 </html>
