@@ -309,23 +309,6 @@
 <?php include("footer.php"); ?> 
 </body>
 <script>
-
-async function get_proData(){
-  const getid = new URLSearchParams(window.location.search)
-  const id = getid.get('id')
-  console.log(id)
-
-  const response = await fetch(`generate_pro_data?id=${id}`);
-  if(response.status === 200){
-    const data = await response.json();
-  console.log(data)
-
-  }
-}
-
-get_proData()
-
-
   // ===== THUMBNAIL CLICK =====
 const thumbs = document.querySelectorAll('.thumbs img');
 const mainImg = document.querySelector('.main img');
@@ -355,65 +338,56 @@ const thumbArrows = document.querySelectorAll('.thumbs .arrow');
 thumbArrows.forEach(arrow => {
   arrow.addEventListener('click', () => {
     if(arrow.textContent === '↑'){
-      thumbContainer.scrollTop -= 120; // scroll up
+      thumbContainer.scrollTop -= 120; 
     } else {
-      thumbContainer.scrollTop += 120; // scroll down
+      thumbContainer.scrollTop += 120; 
     }
   });
 });
 
 
 // 1. Heart Button Logic
-const heart = document.querySelector('.wishlist-btn'); // Target the button container
+const heart = document.querySelector('.wishlist-btn'); 
 
 heart.addEventListener('click', () => {
     heart.classList.toggle('active');
-    
-    // Optional: Change the icon inside when active
+  
     const icon = heart.querySelector('.heart-icon');
     if (heart.classList.contains('active')) {
-        icon.textContent = '♥'; // Solid heart
-        icon.style.color = '#e74c3c'; // Turns red
+        icon.textContent = '♥'; 
+        icon.style.color = '#e74c3c'; 
     } else {
-        icon.textContent = '♡'; // Outline heart
-        icon.style.color = '#333';   // Back to grey/black
+        icon.textContent = '♡'; 
+        icon.style.color = '#333';  
     }
 });
-
 // 2. Quantity Selector Logic
 const minusBtn = document.getElementById('minus');
 const plusBtn = document.getElementById('plus');
 const qtyNumber = document.querySelector('.qty-number');
-
 // Plus Button Click
 plusBtn.addEventListener('click', () => {
     let currentQty = parseInt(qtyNumber.textContent);
     qtyNumber.textContent = currentQty + 1;
 });
-
 // Minus Button Click
 minusBtn.addEventListener('click', () => {
     let currentQty = parseInt(qtyNumber.textContent);
-    // Prevents quantity from going below 1
     if (currentQty > 1) {
         qtyNumber.textContent = currentQty - 1;
     }
 });
-
 const accordionItems = document.querySelectorAll('.product-accordion .acc-item');
-
 accordionItems.forEach((item, index) => {
   const header = item.querySelector('.acc-header');
   const body = item.querySelector('.acc-body');
   const icon = item.querySelector('.icon');
-
   // OPEN FIRST ITEM BY DEFAULT
   if(index === 0){
     item.classList.add('open');
     body.style.maxHeight = body.scrollHeight + "px";
     icon.textContent = '−';
   }
-
   header.addEventListener('click', () => {
     accordionItems.forEach(i => {
       if (i !== item) { // close others
