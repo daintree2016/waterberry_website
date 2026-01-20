@@ -11,106 +11,146 @@
 <body>
     
 <?php include("header.php") ?>
-<section class="about-section">
-    <h2 class="section-title">About Waterberry</h2>
-    <div class="about-content">
-        <div class="image-box">
-            <img src="https://cdn.shopify.com/s/files/1/0534/2108/0748/files/aboutus_1.jpg?v=1741078917" alt="Crescendo Speaker">
-        </div>
-        <div class="text-card">
-            <h3>Our Story</h3>
-            <p>
-                Waterberry is dedicated to bringing top-quality global products to your doorstep. We specialize in consumer electronics, smart home devices, mobile accessories, and lifestyle products. With a focus on innovation, quality, and 
-                customer satisfaction, we collaborate with trusted manufacturers worldwide. Offering seamless logistics, timely deliveries, and exceptional service, we ensure hassle-free imports, making us your reliable partner for all your business and personal needs.
-            </p>
-        </div>
-    </div>
-    <div class="stats-box">
-        <div class="stat">
-            <h4>2+</h4>
-            <span>Years of Experience</span>
-        </div>
-        <div class="stat">
-            <h4>100+</h4>
-            <span>Products</span>
-        </div>
-        <div class="stat">
-            <h4>4/5</h4>
-            <span>Reviews</span>
-        </div>
-        <div class="stat">
-            <h4>30</h4>
-            <span>Community Members</span>
-        </div>
-    </div>
-    <h3 class="difference-title">What make us different</h3>
-<div class="difference-grid">
-            <div class="diff-card">
-                <img src="https://media.istockphoto.com/id/1130702887/photo/it-support.jpg?s=612x612&w=0&k=20&c=FOc3YAESqNnyfN6ImISa0jPZpiND8NCqKoKWG7DzXfE=" alt="Customer Service">
-                <h4>Customer Service</h4>
-                <p>
-                    Where your satisfaction is our top priority. Our dedicated team is here to assist you with any inquiries,
-                    providing personalized support and expert guidance.
-                </p>
-            </div>
-            <div class="diff-card">
-                <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614" alt="Product Quality">
-                <h4>Product Quality</h4>
-                <p>
-                    Providing you with confidence and peace of mind. Trust in our dedication to quality,
-                    and elevate your expectations.
-                </p>
-            </div>
-            <div class="diff-card">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" alt="Distribution Network">
-                <h4>Distribution Network</h4>
-                <p>
-                    Spanning across regions to ensure swift and reliable delivery of our products to your doorstep.
-                    With strategic logistics.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="info-section">
-    <div class="info-container">
-        <div class="info-row">
-            <div class="info-text">
-                <h2>Our Mission</h2>
-                <span class="sub-heading">Excellence in Every Step Forward</span>
-                <p>
-                    
-Our mission is to deliver exceptional value by offering top-tier products sourced from reliable global suppliers. We are committed to:<br>
-1.Quality and Innovation: We strive to provide products that meet the highest quality standards and incorporate the latest innovations in the market.<br>
-2.Customer-Centric Service: Our goal is to exceed customer expectations by offering personalized service, fast deliveries, and continuous support.<br>
-3.Sustainability and Ethics: We are dedicated to maintaining sustainable practices in our sourcing, logistics, and operations, ensuring that our products and processes have a positive environmental and social impact.<br>
-4.Business Growth and Expansion: We aim to expand our market presence globally while fostering strong, long-lasting partnerships with customers and suppliers.
-                </p>
-            </div>
-            <div class="info-image">
-                <img src="https://cdn.shopify.com/s/files/1/0534/2108/0748/files/Seamless_Fulfilment_Nationwide_Reach.png?v=1741073554" alt="Our Vision">
-            </div>
-        </div>
-        <div class="info-row reverse">
-            <div class="info-image">
-                <img src="https://cdn.shopify.com/s/files/1/0534/2108/0748/files/Customer-First_Support.png?v=1741073554" alt="Our Mission">
-            </div>
 
-            <div class="info-text">
-                <h2>Our Vision</h2>
-                <span class="sub-heading">Enabling Success through Innovation and Quality</span>
-                <p>
-                    
-our vision is to be a global leader in importing premium products, enhancing businesses and lives across the world. We aim to:<br>
-1.Bridge International Markets: Connecting customers with innovative, high-quality products from trusted global suppliers.<br>
-2.Provide Tailored Solutions: Offering products that cater to the specific needs of both businesses and individuals.<br>
-3.Embrace Innovation: Continuously adapting to the latest market trends and technologies for the best customer experience.<br>
-4.Build Strong Partnerships: Cultivating long-term relationships with customers and suppliers based on trust and mutual growth.<br>
-                </p>
-            </div>
-        </div>
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Discover the World’s Top Designers.</h1>
+      <p>
+        We’re on a mission to help professionals grow by connecting
+        talent with opportunity.
+      </p>
+    </section>
+<section class="about-section">
+  <div class="about-content">
+    <div class="image-box">
+      <img src="https://cdn.shopify.com/s/files/1/0534/2108/0748/files/aboutus_1.jpg?v=1741078917" alt="Our Story">
     </div>
+
+    <div class="text-card">
+      <h3>Our Story</h3>
+      <p>
+        Waterberry is dedicated to bringing top-quality global products to your doorstep. 
+        We specialize in consumer electronics, smart home devices, mobile accessories, 
+        and lifestyle products. With a focus on innovation, quality, and customer satisfaction, 
+        we collaborate with trusted manufacturers worldwide. Offering seamless logistics, timely deliveries, and 
+        exceptional service, we ensure hassle-free imports, making us your reliable partner for 
+        all your business and personal needs.
+      </p>
+    </div>
+  </div>
 </section>
+
+    <!-- STATS -->
+    <section class="stats-box">
+      <div class="stat">
+        <h3>300+</h3>
+        <span>Design Teams</span>
+      </div>
+      <div class="stat">
+        <h3>12 million+</h3>
+        <span>Creative Users</span>
+      </div>
+      <div class="stat">
+        <h3>160,000</h3>
+        <span>Companies</span>
+      </div>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section class="split">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Mission">
+      <div class="text">
+        <h2>Our Mission</h2>
+        <p>
+          Helping millions of organizations grow better by connecting
+          them with world-class designers.
+        </p>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="split reverse">
+      <div class="text">
+        <h2>Our Story</h2>
+        <p>
+          Founded to empower creatives, our platform was built to remove
+          barriers and create opportunities worldwide.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Story">
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+  <div class="values-grid">
+
+    <div class="value-card">
+      <div class="icon green">📘</div>
+      <h3>Default to transparency</h3>
+      <p>
+        Our true North Star. Transparency is the value we’re best known for,
+        and yet, still very aspirational. We aspire to always default to
+        transparency as a company and as individuals in our decisions and actions.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon red">📈</div>
+      <h3>Improve consistently</h3>
+      <p>
+        Improving consistently is about striving to be better, not in competition
+        with anyone but ourselves. We are committed to working every day toward
+        personal and professional growth.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon blue">⚖️</div>
+      <h3>Be a no-ego doer</h3>
+      <p>
+        We don’t attach our personal selves to ideas. We remove ourselves—our fears,
+        our pride—from our work to lead to better, more productive experiences for us
+        and everyone around us.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon purple">💜</div>
+      <h3>Show gratitude</h3>
+      <p>
+        This value is deeply ingrained in our culture. We regularly show gratitude
+        for each other, for the technology to make the company and life possible,
+        and for the many blessings that Buffer brings to our lives.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon green">🌱</div>
+      <h3>Choose optimism</h3>
+      <p>
+        Choosing optimism is foundational to Buffer’s kind and joyful culture.
+        Optimism helps us look to the future with positivity, while embracing
+        hard conversations and decisions in service of Buffer’s health and future.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon yellow">🔓</div>
+      <h3>Reflect to unblock</h3>
+      <p>
+        We carve out time for reflection in order to unblock ourselves.
+        We believe personal growth stems from vulnerability and introspection
+        as we focus on ongoing self-improvement.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
 <?php include("footer.php") ?>
 </body>
 </html>
