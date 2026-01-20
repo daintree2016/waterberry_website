@@ -9,8 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-
+<?php include("header.php") ?>  
 <div class="container">
+<div class="collection-banner-wrapper">
+    <div class="collection-banner">
+        <img src="https://cdn.prod.website-files.com/66547b42c3b080bb5846ef43/6655d9c844d95f781916ed3e_Contact%20Us%20Image-p-1080.webp" alt="Collection">
+    </div>
+</div>
+
 
 
     <div class="filters">
