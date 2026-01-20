@@ -309,6 +309,23 @@
 <?php include("footer.php"); ?> 
 </body>
 <script>
+
+async function get_proData(){
+  const getid = new URLSearchParams(window.location.search)
+  const id = getid.get('id')
+  console.log(id)
+
+  const response = await fetch(`generate_pro_data?id=${id}`);
+  if(response.status === 200){
+    const data = await response.json();
+  console.log(data)
+
+  }
+}
+
+get_proData()
+
+
   // ===== THUMBNAIL CLICK =====
 const thumbs = document.querySelectorAll('.thumbs img');
 const mainImg = document.querySelector('.main img');
