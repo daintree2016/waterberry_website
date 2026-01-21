@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Top Electronics You Should Have at Home (2026 Edition)",
+        "date": "14",
+        "monthYear": "Nov 2024",
+        "excerpt": "Whether you're upgrading your home setup or buying new devices, here’s a complete guide to the top electronics every home should have in 2026.",
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=500",
+        "alt": "Smartphone",
+        "link": "blog1.php"
+    },
+    {
+        "title": "Technology Hack You Won't Get",
+        "date": "27",
+        "monthYear": "Oct 2024",
+        "excerpt": "Laptops offer flexibility; MacBooks provide seamless integration. Pick based on budget and tech needs.",
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=500",
+        "alt": "Laptop",
+        "link": "blog2"
+    },
+    {
+        "title": "Top 10 Small Camera In The World",
+        "date": "15",
+        "monthYear": "Oct 2024",
+        "excerpt": "Enjoy tangle-free audio, portability, and great sound quality. Wireless is the future of listening.",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500",
+        "alt": "Headphones",
+        "link": "blog3"
+    }
+]

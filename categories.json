@@ -1,0 +1,52 @@
+{
+    "categories":[
+        {
+            "label":"enjoy",
+            "title-top":"with",
+            "title-main":"Earphone",
+            "browse-btn":"Browse",
+            "image":"https://jbtek.in/wp-content/uploads/2023/06/JB-EP225-e1685619026609-430x430.png",
+            "class": "card-earphone"
+        },
+        {
+            "label":"New",
+            "title-top":"Smart",
+            "title-main":"Watch",
+            "browse-btn":"Browse",
+            "image":"https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-trendy-smartwatch-with-notifications-and-apps-png-image_14218279.png",
+            "class": "card-watch"
+        },
+        {
+            "label":"Trend",
+            "title-top":"Devices",
+            "title-main":"Laptop",
+            "browse-btn":"Browse",
+            "image":"https://www.transparentpng.com/thumb/laptop/YmlelI-laptops-png-images-notebook-png-image-laptop.png",
+            "class":"card-laptop"
+        },
+        {
+            "label":"enjoy",
+            "title-top":"with",
+            "title-main":"Earphone",
+            "browse-btn":"Browse",
+            "image":"https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg",
+            "class":"card-console"
+        },
+        {
+            "label":"enjoy",
+            "title-top":"with",
+            "title-main":"Earphone",
+            "browse-btn":"Browse",
+            "image":"https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f3e_cat1-5.avif",
+            "class":"card-oculus"
+        },
+        {
+            "label":"enjoy",
+            "title-top":"with",
+            "title-main":"Earphone",
+            "browse-btn":"Browse",
+            "image":"https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f3c_cat1-6.avif",
+            "class":"card-speaker"
+        }
+    ]
+}
