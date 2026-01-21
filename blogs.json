@@ -15,7 +15,7 @@
         "excerpt": "Laptops offer flexibility; MacBooks provide seamless integration. Pick based on budget and tech needs.",
         "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=500",
         "alt": "Laptop",
-        "link": "blog2"
+        "link": "blog2.php"
     },
     {
         "title": "Top 10 Small Camera In The World",
@@ -24,6 +24,7 @@
         "excerpt": "Enjoy tangle-free audio, portability, and great sound quality. Wireless is the future of listening.",
         "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500",
         "alt": "Headphones",
-        "link": "blog3"
+        "link": "blog3.php"
     }
+
 ]
