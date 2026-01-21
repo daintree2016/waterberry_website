@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php include("header") ?>
+<?php include("header.php") ?>
 
   <div id="newsletterModal" class="modal-overlay">
     <div class="modal-container">
@@ -51,7 +51,6 @@
 
         <div class="watch-container">
         </div>    
-
     <div class="right-side">
         <div class="desc_part">
 
@@ -61,8 +60,8 @@
 
 </div>
     <h2 class="heading">Categories</h2>
-    <div class="cat-grid-wrapper">
-        <a href="collection" class="cat-item-card card-earphone" style="text-decoration: none; display: block;">
+<div class="cat-grid-wrapper">
+    <!-- <a href="collection" class="cat-item-card card-earphone" style="text-decoration: none; display: block;">
         <div class="card-content">
             <span class="label">Enjoy</span>
             <span class="title-top">With</span>
@@ -71,53 +70,57 @@
         </div>
         <img src="https://jbtek.in/wp-content/uploads/2023/06/JB-EP225-e1685619026609-430x430.png" alt="Earphone">
     </a>
-    
-        <div class="cat-item-card card-watch">
-            <div class="card-content">
-                <span class="label">New</span>
-                <span class="title-top">Smart</span>
-                <span class="title-main">Watch</span>
-                <button class="browse-btn">BROWSE</button>
-            </div>
-            <img src="https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-trendy-smartwatch-with-notifications-and-apps-png-image_14218279.png" alt="Watch">
+
+    <a href="collection" class="cat-item-card card-watch" style="text-decoration: none; display: block;">
+        <div class="card-content">
+            <span class="label">New</span>
+            <span class="title-top">Smart</span>
+            <span class="title-main">Watch</span>
+            <button class="browse-btn">BROWSE</button>
         </div>
-        <div class="cat-item-card card-laptop">
-            <div class="card-content">
-                <span class="label">Trend</span>
-                <span class="title-top">Devices</span>
-                <span class="title-main">Laptop</span>
-                <button class="browse-btn">BROWSE</button>
-            </div>
-            <img src="https://www.transparentpng.com/thumb/laptop/YmlelI-laptops-png-images-notebook-png-image-laptop.png" alt="Laptop">
+        <img src="https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-trendy-smartwatch-with-notifications-and-apps-png-image_14218279.png" alt="Watch">
+    </a>
+
+    <a href="collection" class="cat-item-card card-laptop" style="text-decoration: none; display: block;">
+        <div class="card-content">
+            <span class="label">Trend</span>
+            <span class="title-top">Devices</span>
+            <span class="title-main">Laptop</span>
+            <button class="browse-btn">BROWSE</button>
         </div>
-        <div class="cat-item-card card-console">
-            <div class="card-content">
-                <span class="label">Enjoy</span>
-                <span class="title-top">Gaming</span>
-                <span class="title-main">Console</span>
-                <button class="browse-btn">BROWSE</button>
-            </div>
-            <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="Console">
+        <img src="https://www.transparentpng.com/thumb/laptop/YmlelI-laptops-png-images-notebook-png-image-laptop.png" alt="Laptop">
+    </a>
+
+    <a href="collection" class="cat-item-card card-console" style="text-decoration: none; display: block;">
+        <div class="card-content">
+            <span class="label">Enjoy</span>
+            <span class="title-top">Gaming</span>
+            <span class="title-main">Console</span>
+            <button class="browse-btn">BROWSE</button>
         </div>
-        <div class="cat-item-card card-oculus">
-            <div class="card-content">
-                <span class="label">New</span>
-                <span class="title-top">Game</span>
-                <span class="title-main">Oculus</span>
-                <button class="browse-btn">BROWSE</button>
-            </div>
-            <img src="https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f3e_cat1-5.avif" alt="Oculus">
+        <img src="https://wallpapers.com/images/featured/ps5-console-png-ywbv2gv3gfw23o3w.jpg" alt="Console">
+    </a>
+
+    <a href="collection" class="cat-item-card card-oculus" style="text-decoration: none; display: block;">
+        <div class="card-content">
+            <span class="label">New</span>
+            <span class="title-top">Game</span>
+            <span class="title-main">Oculus</span>
+            <button class="browse-btn">BROWSE</button>
         </div>
-        <div class="cat-item-card card-speaker">
-            <div class="card-content">
-                <span class="label">Trend</span>
-                <span class="title-top">Amazon</span>
-                <span class="title-main">Speaker</span>
-                <button class="browse-btn">BROWSE</button>
-            </div>
-            <img src="https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f3c_cat1-6.avif" alt="Speaker">
+        <img src="https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f3e_cat1-5.avif" alt="Oculus">
+    </a>
+
+    <a href="collection" class="cat-item-card card-speaker" style="text-decoration: none; display: block;">
+        <div class="card-content">
+            <span class="label">Trend</span>
+            <span class="title-top">Amazon</span>
+            <span class="title-main">Speaker</span>
+            <button class="browse-btn">BROWSE</button>
         </div>
-    </div>
+        <img src="https://cdn.prod.website-files.com/676a58d5fdde7ec989f63f29/676a58d5fdde7ec989f63f3c_cat1-6.avif" alt="Speaker">
+    </a> -->
+</div>
 
 
 
@@ -140,7 +143,15 @@
 <h2 class="heading">New Launches</h2>
     <div class="prod-grid-wrapper" id="newLaunchesContainer">
     </div>
- 
+ <div class="wrapper">
+   <div class="section-prod">
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+   </div>
+</div>
+
 <section class="blog-section">
     
     <div class="container">
@@ -149,7 +160,7 @@
         </div>
 
         <div class="blog-grid">
-            <article class="blog-card">
+            <!-- <article class="blog-card">
                 <div class="blog-image">
                     <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=500" alt="Smartphone">
                 </div>
@@ -162,8 +173,7 @@
                     <p class="blog-excerpt">Whether you're upgrading your home setup or buying new devices, here’s a complete guide to the top electronics every home should have in 2026.</p>
                     <a href="blog1" class="read-more">Read More <i class="arrow">›</i></a>
                 </div>
-            </article>
-
+            </article> 
             <article class="blog-card">
                 <div class="blog-image">
                     <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=500" alt="Laptop">
@@ -190,7 +200,7 @@
                     <p class="blog-excerpt">Enjoy tangle-free audio, portability, and great sound quality. Wireless is the future of listening.</p>
                     <a href="blog3" class="read-more">Read More <i class="arrow">›</i></a>
                 </div>
-            </article>
+            </article> -->
         </div>
     </div>
 </section>
@@ -199,15 +209,36 @@
   <div class="about-container">
     <h2 class="about-title">ABOUT US</h2>
     <p class="about-text">
-    Waterberry is a modern online electronics destination offering a carefully curated range of smart gadgets, accessories, home tech, 
-    and innovative digital products for a smarter, more effortless lifestyle. We focus on quality, design, and functionality to bring you everyday tech that fits seamlessly into modern living.
+    <p>
+Waterberry is a modern online electronics destination offering a carefully curated range of
+<a href="collection.php" class="link-uline">smart gadgets</a>,
+<a href="collection.php" class="link-uline">accessories</a>,
+<a href="collection.php" class="link-uline">home tech</a>, and
+innovative digital products for a smarter, more effortless lifestyle.
+We focus on quality, design, and functionality to bring you everyday tech that fits seamlessly into modern living.
+</p>
+<style>
+    .link-uline {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link-uline:hover {
+  color: #6b5cff; /* your theme color */
+}
+</style>
   </div>
 </section>
 <br>
 <br>
 
-<?php include("footer") ?>
+<?php include("footer.php") ?>
 <script>
+
 let carouselSlides = [];
 let carouselPosition = 0;
 let carouselTimer = null;
@@ -272,8 +303,43 @@ function manualUpdate() {
         manualUpdate();
     }, 3000);
 }
+//END CAROSUEL
+//categories
+   document.addEventListener("DOMContentLoaded", () => {
+    const gridWrapper = document.querySelector(".cat-grid-wrapper");
 
+    if (!gridWrapper) return;
 
+    const loadCategories = async () => {
+        try {
+            const response = await fetch('categories.json');
+            const data = await response.json();
+
+            gridWrapper.innerHTML = ""; 
+
+            data.categories.forEach(item => {
+                // We use ${item.class} here to apply your CSS colors
+                const cardHTML = `
+                    <a href="collection" class="cat-item-card ${item.class}" style="text-decoration: none; display: block;">
+                        <div class="card-content">
+                            <span class="label">${item.label}</span>
+                            <span class="title-top">${item["title-top"]}</span>
+                            <span class="title-main">${item["title-main"]}</span>
+                            <button class="browse-btn">${item["browse-btn"].toUpperCase()}</button>
+                        </div>
+                        <img src="${item.image}" alt="${item["title-main"]}">
+                    </a>
+                `;
+                gridWrapper.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        } catch (error) {
+            console.error("Error loading categories:", error);
+        }
+    };
+
+    loadCategories();
+});
+//NEW LAUNCHES
 async function getNewLaunches() {
   const container = document.getElementById("newLaunchesContainer");
 
@@ -299,6 +365,7 @@ async function getNewLaunches() {
           <div class="image-container">
             <img src="${val["img"]["main"]}" class="main-img" alt="${val["title"]}">
             <img src="${val["img"]["secondary"]}" class="hover-img" alt="${val["title"]}">
+            
           </div>
           <div class="product-info">
             <div class="divider"></div>
@@ -310,6 +377,7 @@ async function getNewLaunches() {
     });
 
     container.innerHTML = html;
+    
 
   } catch (error) {
     console.error("New Launches Error:", error);
@@ -349,9 +417,43 @@ async function get_products() {
 }
 
 get_products();
+//blogs
+document.addEventListener('DOMContentLoaded', () => {
+    const blogGrid = document.querySelector('.blog-grid');
 
+    async function fetchBlogs() {
+        try {
+            const response = await fetch('blogs.json');
+            if (!response.ok) throw new Error('Failed to fetch blog data');
+            
+            const blogs = await response.json();
+            renderBlogs(blogs);
+        } catch (error) {
+            console.error('Error:', error);
+            blogGrid.innerHTML = `<p>Unable to load blogs at this time.</p>`;
+        }
+    }
+
+    function renderBlogs(blogs) {
+        blogGrid.innerHTML = blogs.map(blog => `
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="${blog.image}" alt="${blog.alt}">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date"><strong>${blog.date}</strong> ${blog.monthYear}</span>
+                    </div>
+                    <h3 class="blog-title">${blog.title}</h3>
+                    <p class="blog-excerpt">${blog.excerpt}</p>
+                    <a href="${blog.link}" class="read-more">Read More <i class="arrow">›</i></a>
+                </div>
+            </article>
+        `).join('');
+    }
+    fetchBlogs();
+});
 </script>
 </body>
 </html>
-
 
