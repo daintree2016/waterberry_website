@@ -145,10 +145,10 @@
     </div>
  <div class="wrapper">
    <div class="section-prod">
-        <div id="loader" class="loader">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
+        <!--<div id="loader" class="loader">-->
+        <!--    <div class="spinner"></div>-->
+        <!--    <p>Loading...</p>-->
+        <!--</div>-->
    </div>
 </div>
 
@@ -211,9 +211,9 @@
     <p class="about-text">
     <p>
 Waterberry is a modern online electronics destination offering a carefully curated range of
-<a href="collection.php" class="link-uline">smart gadgets</a>,
-<a href="collection.php" class="link-uline">accessories</a>,
-<a href="collection.php" class="link-uline">home tech</a>, and
+<a href="collection" class="link-uline">smart gadgets</a>,
+<a href="collection" class="link-uline">accessories</a>,
+<a href="collection" class="link-uline">home tech</a>, and
 innovative digital products for a smarter, more effortless lifestyle.
 We focus on quality, design, and functionality to bring you everyday tech that fits seamlessly into modern living.
 </p>
@@ -344,10 +344,10 @@ async function getNewLaunches() {
   const container = document.getElementById("newLaunchesContainer");
 
   try {
-    const response = await fetch("./newlaunches.json");
-    if (!response.ok) throw new Error("Failed to load JSON");
+    // const response = await fetch("./newlaunches.json");
+    // if (!response.ok) throw new Error("Failed to load JSON");
 
-    const products = await response.json();
+    // const products = await response.json();
     let html = "";
     
     const resp = await fetch("get_featured");
@@ -361,7 +361,7 @@ async function getNewLaunches() {
     Object.entries(data_set).forEach(([key,val])=>{
          console.log(val["Price"])
       html += `
-        <div class="prod-item-box">
+        <div class="prod-item-box" data-id="${key}">
           <div class="image-container">
             <img src="${val["img"]["main"]}" class="main-img" alt="${val["title"]}">
             <img src="${val["img"]["secondary"]}" class="hover-img" alt="${val["title"]}">
@@ -377,6 +377,14 @@ async function getNewLaunches() {
     });
 
     container.innerHTML = html;
+    document.querySelectorAll(".prod-item-box").forEach((item)=>{
+        item.addEventListener("click",(e)=>{
+                const asin = item.dataset.id
+                window.location.href=`product?id=${asin}`
+        })
+        // console.log("this is item: ",item)
+        
+    })
     
 
   } catch (error) {
@@ -456,4 +464,16 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
