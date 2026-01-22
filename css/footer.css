@@ -1,6 +1,6 @@
 
 /*footer*/
-/* 2. Title Styling */
+
 .section-title {
     letter-spacing: 4px;
     padding: 30px 0;
@@ -12,28 +12,29 @@
     margin-bottom: 0;
 }
 
-
-/* 6. Footer Flush Fix */
 footer, .footer {
     margin-top: 0 !important;
 }
 
 
-/* Your original requested styles */
 
 
-.content { flex: 1; width: 100%; }
+.content { 
+    flex: 1; 
+    width: 100%; 
+}
 
-/* Sticky Footer with No Space */
 .main-footer {
     background-color: #3D3F84;
     color: white;
     width: calc(100% + 40px);
     margin: 0 -20px -40px -20px;
     padding: 60px 50px 30px 50px;
+    
+
+    
 }
 
-/* Feature Boxes */
 
 .newsletter{
     width:100%;
@@ -68,15 +69,13 @@ footer, .footer {
 }
 
 .email-box{
-    display:flex;
-    width:360px;
-    max-width:100%;
-    border:1px solid #ddd;
-    background:black;
+    display: flex;
+    width: 360px;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    background: white;
     text-align: center;
     justify-content: center;
-
-    /* 👇 center it */
     margin: 0 auto;
 }
 
@@ -119,7 +118,6 @@ footer, .footer {
     padding:60px 0 20px 0;
 }
 
-/* FULL WIDTH BAR */
 .footer-main-content{
     width:100%;
     display:flex;
@@ -129,14 +127,12 @@ footer, .footer {
     border-bottom:1px solid #333;
 }
 
-/* Columns */
 .footer-col{
     flex:1;
     padding:0 15px;
     cursor: pointer;
 }
 
-/* Bottom bar */
 .footer-bottom{
     width:100%;
     display:flex;
@@ -209,4 +205,138 @@ footer, .footer {
   height: 2px;
   background: rgb(210, 210, 238);
   margin-bottom: 60px;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  .newsletter {
+    padding: 40px 15px;
+  }
+
+  .newsletter h2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .newsletter p {
+    font-size: 12px;
+  }
+
+  .email-box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .email-box input {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .email-box button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .footer-main-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .footer-col {
+    padding: 0;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .my-address {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .payment-icons {
+    justify-content: center;
+  }
+}
+
+.bottom-links a {
+    text-decoration: none;   /* removes underline */
+    color: black;
+    font-size: 14px;
+    margin: 0 4px;
+}
+
+.bottom-links a:hover {
+    color: #000;             /* hover effect */
+}
+
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .newsletter {
+    padding: 50px 20px;
+  }
+
+  .email-box {
+    width: 320px;
+  }
+
+  .footer-main-content {
+    padding: 0 4%;
+    gap: 20px;
+  }
+
+  .footer-col h3 {
+    font-size: 15px;
+  }
+
+  .footer-col p,
+  .footer-col li {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding: 20px 4%;
+    font-size: 11px;
+  }
+}
+
+
+
+
+
+@media (min-width: 1025px) {
+
+  .newsletter {
+    padding: 60px 20px;
+  }
+
+  .email-box {
+    width: 360px;
+  }
+
+  .footer-main-content {
+    padding: 0 5%;
+  }
+
+  .footer-bottom {
+    padding: 20px 5%;
+    font-size: 12px;
+  }
 }
