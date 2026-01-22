@@ -1,8 +1,26 @@
+<?php
+// Start session once for the whole site so cart and login status work everywhere
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include("db.php");
+
+// Simple helpers for header
+$isLoggedIn = isset($_SESSION['customer_id']);
+$customerName = $_SESSION['customer_name'] ?? '';
+
+// Cart count from session
+$cartCount = 0;
+if (!empty($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+    foreach ($_SESSION['cart'] as $item) {
+        $cartCount += (int)($item['qty'] ?? 1);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <?php include("db.php")?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="css/header.css">
@@ -15,33 +33,33 @@
 
     <div class="nav-group-right">
         <nav class="nav-links">
-            <a href="index.php" class="nav-item">Home</a>
-            <a href="about.php" class="nav-item">About us</a>
-            <a href="#" class="nav-item">Products</a>
-            <a href="blog1.php" class="nav-item">Blogs</a>
-            <a href="contact.php" class="nav-item">Contact us</a>
+            <a href="index" class="nav-item">Home</a>
+            <a href="about" class="nav-item">About us</a>
+            <a href="collection" class="nav-item">Products</a>
+            <a href="blog1" class="nav-item">Blogs</a>
+            <a href="contact" class="nav-item">Contact us</a>
         </nav>
 
        
 <div class="nav-icons">
-    <a href="wishlist.php" class="icon-link" title="Wishlist">
+    <a href="wishlist" class="icon-link" title="Wishlist">
         <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
         </svg>
     </a>
 
-    <a href="cart.php" class="icon-link" title="Shopping Cart">
+    <a href="cart" class="icon-link" title="Shopping Cart">
         <div class="cart-container">
             <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="9" cy="21" r="1"></circle>
                 <circle cx="20" cy="21" r="1"></circle>
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
-            <span class="cart-count">2</span>
+            <span class="cart-count" id="cart_count"><?php echo (int)$cartCount; ?></span>
         </div>
     </a>
 
-    <a href="signup.php" class="icon-link" title="My Account">
+    <a href="<?php echo $isLoggedIn ? 'customer' : 'signup'; ?>" class="icon-link" title="My Account">
         <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -60,7 +78,7 @@
 
 <div class="search-side-panel" id="searchSidePanel">
     <div class="search-panel-header">
-        <h3>Search Our Store</h3>
+        <h3>Search Our products</h3>
         <button id="closeSearch" class="close-btn">&times;</button>
     </div>
     <div class="search-panel-body">
@@ -107,7 +125,7 @@ document.getElementById("submitSearch").addEventListener("click", function() {
    
     if (query.trim() !== "") {
         // Redirects to your search page with the query
-        window.location.href = "search.php?query=" + encodeURIComponent(query);
+        window.location.href = "search?query=" + encodeURIComponent(query);
     } else {
         alert("Please enter a search term.");
     }
