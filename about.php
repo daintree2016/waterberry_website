@@ -16,10 +16,9 @@
 
     <!-- HERO -->
     <section class="hero">
-      <h1>Discover the World’s Top Designers.</h1>
+      <h1>Where Innovation Meets Everyday Life.  </h1>
       <p>
-        We’re on a mission to help professionals grow by connecting
-        talent with opportunity.
+        We bring you top-quality gadgets, accessories, and electronics from trusted brands, delivered across India.
       </p>
     </section>
 <section class="about-section">
@@ -45,16 +44,16 @@
     <!-- STATS -->
     <section class="stats-box">
       <div class="stat">
-        <h3>300+</h3>
-        <span>Design Teams</span>
+        <h3>2025 year</h3>
+        <span>Founded </span>
       </div>
       <div class="stat">
-        <h3>12 million+</h3>
-        <span>Creative Users</span>
+        <h3>1000+ </h3>
+        <span>products</span>
       </div>
       <div class="stat">
-        <h3>160,000</h3>
-        <span>Companies</span>
+        <h3> 100%</h3>
+        <span>Secure payment</span>
       </div>
     </section>
 
@@ -65,7 +64,8 @@
         <h2>Our Mission</h2>
         <p>
           Helping millions of organizations grow better by connecting
-          them with world-class designers.
+          them with world-class designers.Early into Waterberry’s journey, our founders set out with one simple goal — to make buying electronics easy, reliable, and accessible for everyone. Frustrated by complicated choices, unclear pricing, 
+          and unreliable sellers, we built Waterberry around trust, quality, and customer-first service. Every decision we make today is guided by that same belief: great technology should be simple to buy and a pleasure to own.
         </p>
       </div>
     </section>
@@ -73,80 +73,85 @@
     <!-- OUR STORY -->
     <section class="split reverse">
       <div class="text">
-        <h2>Our Story</h2>
+        <h2>Our Vision</h2>
         <p>
-          Founded to empower creatives, our platform was built to remove
-          barriers and create opportunities worldwide.
+          Early into Waterberry’s journey, our founders set out with one simple goal — to make buying electronics easy, reliable, and accessible for everyone. Frustrated by complicated choices, unclear pricing, 
+          and unreliable sellers, we built Waterberry around trust, quality, and customer-first service. Every decision we make today is guided by that same belief: great technology should be simple to buy and a pleasure to own.
         </p>
       </div>
       <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Story">
     </section>
 
     <!-- VALUES -->
-    <section class="values-section">
+<!-- VALUES SECTION -->
+<section class="values-section">
+
   <div class="values-grid">
 
+    <!-- Box 1 -->
     <div class="value-card">
-      <div class="icon green">📘</div>
+      <img src="images/1.png" class="icon" alt="Transparency">
       <h3>Default to transparency</h3>
       <p>
-        Our true North Star. Transparency is the value we’re best known for,
-        and yet, still very aspirational. We aspire to always default to
-        transparency as a company and as individuals in our decisions and actions.
+        We believe great tech should feel premium, last longer, and work better.
+        Every product on Waterberry is carefully selected to meet high standards
+        of performance, durability, and design. We don’t sell shortcuts. We sell quality.
       </p>
     </div>
 
+    <!-- Box 2 -->
     <div class="value-card">
-      <div class="icon red">📈</div>
+      <img src="images/2.png" class="icon" alt="Improve">
       <h3>Improve consistently</h3>
       <p>
-        Improving consistently is about striving to be better, not in competition
-        with anyone but ourselves. We are committed to working every day toward
-        personal and professional growth.
+        Technology moves fast — and so do we. We constantly update our collection
+        with the latest gadgets, smarter accessories, and trending tech that makes
+        life easier and more exciting.
       </p>
     </div>
 
+    <!-- Box 3 -->
     <div class="value-card">
-      <div class="icon blue">⚖️</div>
+      <img src="images/3.png" class="icon" alt="Customer First">
       <h3>Be a no-ego doer</h3>
       <p>
-        We don’t attach our personal selves to ideas. We remove ourselves—our fears,
-        our pride—from our work to lead to better, more productive experiences for us
-        and everyone around us.
+        Your experience matters more than anything. From browsing to checkout
+        to delivery, we focus on making every step smooth, fast, and reliable.
       </p>
     </div>
 
+    <!-- Box 4 -->
     <div class="value-card">
-      <div class="icon purple">💜</div>
+      <img src="images/4.png" class="icon" alt="Gratitude">
       <h3>Show gratitude</h3>
       <p>
-        This value is deeply ingrained in our culture. We regularly show gratitude
-        for each other, for the technology to make the company and life possible,
-        and for the many blessings that Buffer brings to our lives.
+        Great tech shouldn’t come with crazy markups. We believe in transparent
+        pricing, real value, and deals that actually make sense.
       </p>
     </div>
 
+    <!-- Box 5 -->
     <div class="value-card">
-      <div class="icon green">🌱</div>
+      <img src="images/5.png" class="icon" alt="Optimism">
       <h3>Choose optimism</h3>
       <p>
-        Choosing optimism is foundational to Buffer’s kind and joyful culture.
-        Optimism helps us look to the future with positivity, while embracing
-        hard conversations and decisions in service of Buffer’s health and future.
+        Gadgets should not only work well — they should look good too.
+        Our products combine modern design with everyday usability.
       </p>
     </div>
 
+    <!-- Box 6 -->
     <div class="value-card">
-      <div class="icon yellow">🔓</div>
+      <img src="images/6.png" class="icon" alt="Trust">
       <h3>Reflect to unblock</h3>
       <p>
-        We carve out time for reflection in order to unblock ourselves.
-        We believe personal growth stems from vulnerability and introspection
-        as we focus on ongoing self-improvement.
+        We’re building more than a store — we’re building trust.
+        Every order is backed by reliability and long-term commitment.
       </p>
     </div>
 
   </div>
+
 </section>
 
 
