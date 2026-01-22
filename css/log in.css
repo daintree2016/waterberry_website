@@ -36,16 +36,15 @@ body {
 }
 
 .brand img {
-    max-width: 150px; /* Adjust this width to fit your design */
-    height: auto;     /* Maintains aspect ratio */
-    display: block;   /* Removes unwanted bottom spacing */
-    margin-bottom: 20px; /* Adds space between logo and "Login" title */
+    max-width: 150px; 
+    height: auto;     
+    display: block;   
+    margin-bottom: 20px;
 }
 
-/* If you want the logo centered in the left column */
 .brand {
     display: flex;
-    justify-content: flex-start; /* Change to center if desired */
+    justify-content: flex-start; 
     width: 100%;
 }
 .login-left h2 {
@@ -116,6 +115,7 @@ input {
     border: none;
     font-size: 16px;
     cursor: pointer;
+    width: 97%;
 }
 
 .login-right {
@@ -132,7 +132,6 @@ input {
     object-fit: contain;
 }
 
-/* SWITCH TEXT */
 .switch {
     margin-top: 16px;
     font-size: 14px;
