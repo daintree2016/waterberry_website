@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
 }
 
 body {
@@ -10,49 +10,13 @@ body {
     color: #333;
 }
 
-/* Navbar Centering */
-.navbar {
-    background: white;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.nav-content {
-    max-width: 1100px;
-    margin: 0 auto; /* Centers the content */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo { font-weight: bold; font-size: 20px; letter-spacing: 1px; }
-
-nav a {
-    text-decoration: none;
-    color: #666;
-    margin: 0 15px;
-    font-size: 14px;
-}
-
-.nav-right { display: flex; align-items: center; gap: 20px; }
-.btn-signup {
-    background: #111;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Main Container - This creates the side spacing */
 .main-container {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Contact Grid */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,15 +31,20 @@ nav a {
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
-/* Left Side Styling */
-.info-card h2 { margin-bottom: 10px; }
-.subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+
+.info-card h2 { 
+    margin-bottom: 10px; 
+}
+.subtitle { 
+    color: #888; 
+    font-size: 14px; 
+    margin-bottom: 30px; 
+}
 
 .info-item {
     padding: 15px 0;
     border-bottom: 1px solid #f0f0f0;
 }
-
 .info-item label {
     display: block;
     font-size: 12px;
@@ -83,9 +52,6 @@ nav a {
     font-weight: bold;
     margin-bottom: 5px;
 }
-
-/* Form Styling */
-
 
 input, select, textarea {
     width: 100%;
@@ -127,7 +93,7 @@ textarea { height: 100px; resize: none; }
 .map-placeholder {
     width: 100%;
     height: 350px;
-    background: #d1e0d7; /* Pale map color */
+    background: #d1e0d7;
     border-radius: 8px;
     position: relative;
     background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
@@ -141,7 +107,7 @@ textarea { height: 100px; resize: none; }
     font-size: 30px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .contact-grid { grid-template-columns: 1fr; }
     .nav-content nav { display: none; }
