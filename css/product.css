@@ -9,7 +9,7 @@ body{
   color:#2c2c2c;
 }
 .container{
-  max-width:1200px;
+  max-width:1352px;
   margin:40px auto;
   display:grid;
   grid-template-columns:80px 1fr 1fr;
@@ -52,7 +52,7 @@ body{
   font-size:14px;
 }
 .main {
-  background:#f6f9f3;
+  background:ghostwhite;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -62,8 +62,8 @@ body{
 }
 .main img {
   height:100%;      
-  width:auto;
-  object-fit:cover;
+  width:100%;
+  object-fit:contain;
   transition: opacity 0.4s ease, transform 0.3s ease; 
   opacity: 1;
 }
@@ -86,7 +86,7 @@ body{
   color:#7a7a7a;
 }
 .title{
-  font-size:30px;
+  font-size:21px;
   font-weight:500;
   margin:8px 0 16px;
 }
@@ -246,16 +246,18 @@ body{
     }
   }
 .faq-box{
-  max-width:1200px;
-  margin:80px auto;
-  border:1.5px solid #000;
-  border-radius:16px;
-  padding:40px;
+      margin: 80px auto;
+    border: 1.5px solid #000;
+    border-radius: 16px;
+    padding: 70px;
+    width: 43%;
+    background-color: lightblue;
+
 }
 .faq-inner{
   display:grid;
-  grid-template-columns:220px 1fr;
-  gap:40px;
+  grid-template-columns:120px 1fr;
+  gap:55px;
 }
 .faq-left h2{
   font-size:28px;
@@ -329,7 +331,7 @@ body{
 .recommend{
   max-width:1200px;
   margin:80px auto 100px;
-  padding-left:0;
+  padding-left:28px;
 }
 .recommend-head{
   display:flex;
@@ -356,7 +358,7 @@ body{
   display: flex;        
   overflow-x: hidden;    
   scroll-behavior: smooth;
-  gap: 32px;
+  gap: 10px;
   padding: 10px 0;
 }
 .card {
@@ -572,8 +574,6 @@ body{
 
 
 
-
-/* Centers the entire block and creates side space */
 .tabs-section-wrapper {
   width: 100%;
   display: flex;
@@ -582,15 +582,15 @@ body{
 }
 
 .tabs-container {
-  width: 90%; /* This creates the "left and right spaces" */
-  max-width: 1100px; /* Limits width on very large screens */
+  width: 90%; 
+  max-width: 1100px; 
   border: 1px solid #ddd;
   background: #fff;
 }
 
 .tabs-header {
   display: flex;
-  background: #f1f3f5; /* Light gray background like image */
+  background: #f1f3f5; 
   border-bottom: 1px solid #ddd;
 }
 
@@ -613,7 +613,6 @@ body{
   border-right: none;
 }
 
-/* Active Tab Styles */
 .tab-item.active {
   background: #fff;
   color: #333;
@@ -627,15 +626,13 @@ body{
 }
 
 .tab-pane {
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
-/* Description is ALWAYS displayed */
 #description.active {
   display: block;
 }
 
-/* Shown when other tabs are clicked */
 .tab-pane.show {
   display: block;
   margin-top: 20px;
