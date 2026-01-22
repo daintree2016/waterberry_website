@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    height: 80px;
+    height: 100px;
     box-sizing: border-box;
     border-bottom: 1px solid #eeeeee;
      position: sticky;
@@ -29,7 +29,7 @@ body {
     z-index: 1000; 
 }
 .logo img {
-    height: 35px;
+    height: 50px;
     width: auto;
 }
 .nav-group-right {
@@ -46,7 +46,7 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 21px;
     font-family: 'Segoe UI', Arial, sans-serif;
     transition: color 0.3s ease;
 }
@@ -128,10 +128,7 @@ body {
     justify-content: space-between;
 }
 
-.logo img {
-    height: 36px;
-    width: auto;
-}
+
 
 .nav-group-right {
     display: flex;
@@ -322,4 +319,29 @@ body {
 .search-action-btn:hover {
     background-color: #333333;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
