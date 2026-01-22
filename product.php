@@ -1,9 +1,89 @@
+<?php
+include("db.php");
+
+// Basic product fetch using ProductID from query string: product.php?id=XXXX
+$productId = isset($_GET['id']) ? trim($_GET['id']) : '';
+$product    = null;
+$images     = [
+    'main'      => '',
+    'secondary' => ''
+];
+
+if ($productId !== '') {
+    // Fetch product core details from Inventory
+    $sql = "SELECT ProductID, Title, Sale_Price, Brand FROM Inventory WHERE ProductID = ? LIMIT 1";
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("s", $productId);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+            $product = $result->fetch_assoc() ?: null;
+        }
+        $stmt->close();
+    }
+
+    // Fetch main image
+    $sqlImgMain = "SELECT URL FROM Images WHERE ProductID = ? AND Is_main = 1 LIMIT 1";
+    if ($stmt = $conn->prepare($sqlImgMain)) {
+        $stmt->bind_param("s", $productId);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+            if ($row = $result->fetch_assoc()) {
+                $images['main'] = $row['URL'];
+            }
+        }
+        $stmt->close();
+    }
+
+    // Fetch secondary image (hover)
+    $sqlImgSec = "SELECT URL FROM Images WHERE ProductID = ? AND Is_main = 0 LIMIT 1";
+    if ($stmt = $conn->prepare($sqlImgSec)) {
+        $stmt->bind_param("s", $productId);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+            if ($row = $result->fetch_assoc()) {
+                $images['secondary'] = $row['URL'];
+            }
+        }
+        $stmt->close();
+    }
+
+    // Fallback – if no secondary image, reuse main
+    if (empty($images['secondary'])) {
+        $images['secondary'] = $images['main'];
+    }
+}
+
+// Friendly defaults if product not found
+$brand       = $product['Brand'] ?? 'Waterberry';
+$title       = $product['Title'] ?? 'Product not found';
+$priceNumber = isset($product['Sale_Price']) ? (float)$product['Sale_Price'] : 0;
+$priceText   = $priceNumber > 0 ? '₹' . number_format($priceNumber) : '₹0';
+
+// A simple "struck-through" price placeholder (e.g. MRSP ~ 20% higher)
+$oldPriceText = $priceNumber > 0
+    ? '₹' . number_format(round($priceNumber * 1.2))
+    : '₹0';
+
+// If no DB images, keep the original demo image URLs as graceful fallback
+$fallbackThumbs = [
+    "https://londonlash.com/cdn/shop/products/Stanley-LL4.jpg?v=1708446397",
+    "https://static01.nyt.com/images/2022/05/17/fashion/17STANLEY-BOTTLE1/17STANLEY-BOTTLE1-videoSixteenByNineJumbo1600.jpg",
+    "https://hips.hearstapps.com/hmg-prod/images/stanley-quencher-tumbler-april-2023-642b61bd06f19.png?crop=0.668xw:1.00xh;0.0850xw,0&resize=640:*",
+    "https://media.greenmatters.com/brand-img/Ina3-uiYY/0x0/are-stanley-cups-worth-it-2-1704721221015.jpg",
+    "https://baskets-store.com/cdn/shop/collections/526B7563.jpg?v=1750689905"
+];
+
+$mainImage   = $images['main'] ?: $fallbackThumbs[0];
+$thumbImages = $images['main']
+    ? [$images['main'], $images['secondary']]
+    : $fallbackThumbs;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Product page</title>
+<title>Product - <?php echo htmlspecialchars($title); ?></title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/product.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,35 +95,31 @@
 
   <!-- LEFT -->
   <div class="thumbs">
-    <img src="https://londonlash.com/cdn/shop/products/Stanley-LL4.jpg?v=1708446397">
-    <img src="https://static01.nyt.com/images/2022/05/17/fashion/17STANLEY-BOTTLE1/17STANLEY-BOTTLE1-videoSixteenByNineJumbo1600.jpg">
-    <img src="https://hips.hearstapps.com/hmg-prod/images/stanley-quencher-tumbler-april-2023-642b61bd06f19.png?crop=0.668xw:1.00xh;0.0850xw,0&resize=640:*">
-    <img src="https://media.greenmatters.com/brand-img/Ina3-uiYY/0x0/are-stanley-cups-worth-it-2-1704721221015.jpg">
-    <img src="https://baskets-store.com/cdn/shop/collections/526B7563.jpg?v=1750689905">
-    <img src="https://baskets-store.com/cdn/shop/collections/526B7563.jpg?v=1750689905">
-    
+    <?php foreach ($thumbImages as $imgSrc): ?>
+      <img src="<?php echo htmlspecialchars($imgSrc); ?>">
+    <?php endforeach; ?>
   </div>
 
   <!-- MAIN IMAGE -->
   <div class="main">
-    <img src="https://baskets-store.com/cdn/shop/collections/526B7563.jpg?v=1750689905">
+    <img src="<?php echo htmlspecialchars($mainImage); ?>">
   </div>
 
   <!-- DETAILS -->
   <div class="details">
-    <div class="brand">Stanley</div>
-    <div class="title">Stanley 40 oz. Quencher H2.0 FlowState Tumbler - POOL</div>
+    <div class="brand"><?php echo htmlspecialchars($brand); ?></div>
+    <div class="title"><?php echo htmlspecialchars($title); ?></div>
 
     <div class="price-row">
-      <div class="price">₹12,847 </div>
-      <div class="old">₹10,847</div>
+      <div class="price"><?php echo htmlspecialchars($priceText); ?></div>
+      <div class="old"><?php echo htmlspecialchars($oldPriceText); ?></div>
       <div class="discount">-24% </div>
     </div>
-
+<!-- 
     <div class="desc">
       ON-THE-GO CONVENIENCE: With a detachable crossbody strap, this carry-all fits your 40 OZ Stanley tumbler for hands-free sipping while commuting or adventuring. The thoughtful design of this Stanley accessory keeps your essentials organized.
 
-    </div>
+    </div> -->
 
    <div class="product-actions">
     <div class="quantity-selector">
@@ -167,31 +243,84 @@
 
       <div class="faq-item active">
         <div class="faq-question">
-          <span>When we get the parcel?</span>
+          <span>Is shipping free?</span>
           <span class="faq-icon">−</span>
         </div>
         <div class="faq-answer">
-          Yes, all our products are 100% vegan and cruelty-free. We never test on animals.
+          Yes. Free shipping is available on all orders across India.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Is Cash On Delivery (COD) available?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          COD may not be available for products shipped internationally. Payment options are shown at checkout.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is your return policy?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          You can request a return within 7 days of delivery if the product is unused and not physically damaged.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do waterberry products come with a warranty?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Warranty terms may differ based on the product and brand. Applicable products come with a manufacturer’s warranty.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I cancel my order after placing it?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Orders can be cancelled within a short window 24 hours after placement. Once shipped, cancellation isn’t possible.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do I have to pay any extra customs duty?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          No. All prices shown are final. There are no additional customs or hidden charges after placing an order.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What payment methods are accepted?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We accept UPI, credit/debit cards, net banking, and wallets.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How long will my order take to arrive?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Delivery times vary by location. Usually it takes around 10+ Business days.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>whats the meaning of waterberry?</span>
+          <span>How can I contact customer support?</span>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          No, our products are free from parabens, sulfates, and harmful chemicals.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>is there any cod option?</span>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-answer">
-          Yes, they are dermatologist-tested and safe for sensitive skin.
+          You can reach our waterberry support team via the Contact Us page or email. We aim to respond within 1 business day.
         </div>
       </div>
 
@@ -286,7 +415,7 @@
         <div class="price">₹36</div>
       </div>
     </div>
-<div class="card">
+    <div class="card">
       <div class="badge">BEST SELLER</div>
       <div class="card-img"><img src="https://cdn.shopify.com/s/files/1/0516/4564/5000/files/Web_PNG_Square-TheQuencherProTourFlipstrawTumbler30OZ-BabyBowPinkPeppermint-Front_ccb2f04d-7f38-4efd-b590-79fc08ad86cc.png?v=1761753219&width=824&height=824" /></div>
       <div class="card-info">
@@ -307,8 +436,42 @@
   </div>
 </section>
 <?php include("footer.php"); ?> 
-</body>
+<script src="js/cart.js"></script>
 <script>
+  // CART INTEGRATION
+  const addToCartBtn = document.querySelector('.buttons .add');
+  const buyNowBtn = document.querySelector('.buttons .buy');
+  const qtyDisplay = document.querySelector('.qty-number');
+  const productId = "<?php echo htmlspecialchars($productId); ?>";
+  const productTitle = "<?php echo htmlspecialchars($title); ?>";
+  const productImg = "<?php echo htmlspecialchars($mainImage); ?>";
+  const productPrice = <?php echo json_encode($priceNumber); ?>;
+
+  async function handleAddToCart(redirectToCart = false) {
+    if (!productId || !productPrice) {
+      alert("This product cannot be added to cart right now.");
+      return;
+    }
+    const qty = parseInt(qtyDisplay.textContent) || 1;
+    const resp = await addToCart(productId, productTitle, productImg, productPrice, qty);
+    if (resp && !resp.error) {
+      if (redirectToCart) {
+        window.location.href = "cart";
+      } else {
+        alert("Added to cart");
+      }
+    } else {
+      alert("Unable to add to cart. Please try again.");
+    }
+  }
+
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', () => handleAddToCart(false));
+  }
+  if (buyNowBtn) {
+    buyNowBtn.addEventListener('click', () => handleAddToCart(true));
+  }
+
   // ===== THUMBNAIL CLICK =====
 const thumbs = document.querySelectorAll('.thumbs img');
 const mainImg = document.querySelector('.main img');
@@ -482,28 +645,24 @@ function scrollRecommend(direction) {
     behavior: 'smooth'
   });
 }
-
-
+//description,about,specifications
 function toggleTab(tabId, element) {
-    // 1. Remove active class from all tab buttons
-    const tabs = document.querySelectorAll('.tab-item');
-    tabs.forEach(tab => tab.classList.remove('active'));
-    
-    // 2. Add active class to clicked tab
-    element.classList.add('active');
-
-    // 3. Hide all panes except the description
-    const panes = document.querySelectorAll('.tab-pane');
-    panes.forEach(pane => {
-        if(pane.id !== 'description') {
-            pane.classList.remove('show');
-        }
-    });
-
-    // 4. If clicked tab is NOT description, show its content
-    if (tabId !== 'description') {
-        document.getElementById(tabId).classList.add('show');
-    }
+  var content = document.getElementsByClassName('tab-pane');
+  for (var i = 0; i < content.length; i++) {
+    content[i].style.display = 'none';
+    content[i].classList.remove('active');
+  }
+  var tabs = document.getElementsByClassName('tab-item');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('active');
+  }
+  document.getElementById(tabId).style.display = 'block';
+  element.classList.add('active');
 }
+
+
+
+//cart
+
 </script>
 </html>
