@@ -137,3 +137,37 @@ input {
         padding: 40px;
     }
 }
+
+
+
+/* Hide right image from 480px to 899px */
+@media (max-width: 899px) {
+    .login-right {
+        display: none;
+    }
+
+    .login-left {
+        width: 100%;
+    }
+}
+/* =========================================
+   900px – 1130px layout (same side spacing)
+========================================= */
+@media (min-width: 900px) and (max-width: 1130px) {
+
+    .login-card {
+        width: 95%;
+        height: auto;
+        padding: 0;
+    }
+
+    .login-left,
+    .login-right {
+        width: 50%;
+        padding: 40px;
+    }
+
+    .login-right img {
+        max-width: 80%;
+    }
+}
