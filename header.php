@@ -32,34 +32,27 @@ if (!empty($_SESSION['cart']) && is_array($_SESSION['cart'])) {
     </div>
 
     <div class="nav-group-right">
-
-    <div class="hamburger" id="hamburger">
-        <a href="index" class="nav-item">Home</a>
-        <a href="about" class="nav-item">About</a>
-        <!-- <a href="collection" class="nav-item">Products</a> -->
-        <a href="blog1" class="nav-item">Blogs</a>
-        <a href="contact" class="nav-item">Contact</a>
-    </div>
-
-    <nav class="nav-links" id="navLinks">
-        <a href="index" class="nav-item">Home</a>
-        <a href="about" class="nav-item">About</a>
-        <!-- <a href="collection" class="nav-item">Products</a> -->
-        <a href="blog1" class="nav-item">Blogs</a>
-        <a href="contact" class="nav-item">Contact</a>
-    </nav>
+        
+        <nav class="nav-links">
+            <a href="index" class="nav-item">Home</a>
+            <a href="about" class="nav-item">About</a>
+            <!-- <a href="collection" class="nav-item">Products</a> -->
+            <a href="blog1" class="nav-item">Blogs</a>
+            <a href="contact" class="nav-item">Contact</a>
+        </nav>
+        
+            
 
 </div>
-
 
        
 <div class="nav-icons">
     
-    <a href="wishlist" class="icon-link" title="Wishlist">
+    <!-- <a href="wishlist" class="icon-link" title="Wishlist">
         <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
         </svg>
-    </a>
+    </a> -->
 
     <a href="cart" class="icon-link" title="Shopping Cart">
         <div class="cart-container">
@@ -86,6 +79,17 @@ if (!empty($_SESSION['cart']) && is_array($_SESSION['cart'])) {
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
     </svg>
 </button>
+<div class="hamburger-icon" id="hamburgerIcon">
+             ☰
+            </div>
+
+
+    <div class="hamburger" id="hamburgerMenu">
+        <a href="index" class="nav-item">Home</a>
+        <a href="about" class="nav-item">About</a>
+        <a href="blog1" class="nav-item">Blogs</a>
+        <a href="contact" class="nav-item">Contact</a>
+    </div>
     <!-- SEARCH DROPDOWN -->
 <div class="search-overlay" id="searchOverlay"></div>
 
@@ -149,15 +153,13 @@ document.getElementById("searchInput").addEventListener("keypress", function(e) 
     if (e.key === "Enter") {
         document.getElementById("submitSearch").click();
     }
-
 });
 
+const icon = document.getElementById("hamburgerIcon");
+const menu = document.getElementById("hamburgerMenu");
 
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+icon.addEventListener("click", () => {
+    menu.classList.toggle("active");
 });
 
 </script>
