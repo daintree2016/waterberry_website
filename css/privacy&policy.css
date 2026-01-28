@@ -60,7 +60,10 @@
         }
 
         strong {
-            color: #111;
+            color: white;
+        }
+        strongs {
+            color: #222;
         }
 
         @media (max-width: 600px) {
@@ -143,4 +146,15 @@
             .policy-container {
                 padding: 20px;
             }
+        }
+
+        @media(min-width:480px){
+.container {
+    background-color: #fff;
+    /* max-width: 900px; */
+    width: 100%;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
         }
