@@ -99,13 +99,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="password" name="password" placeholder="Enter your password" required>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <label class="remember">
                         <input type="checkbox" name="remember">
                         Remember Me
                     </label>
                     <!-- Forgot password flow can be added later -->
-                    <span></span>
+                    <!-- <span></span> -->
+                <!-- </div> --> -->
+                <div id="forgotModal" class="modal-overlay">
+                        <div class="modal-content">
+                            <span class="close-btn" id="closeModal">&times;</span>
+                            <h2>Forgot Password</h2>
+                            <p>Enter your email address to reset your password.</p>
+                            <input type="email" placeholder="Email Address" class="modal-input" required>
+                            <button class="reset-button">Send Reset Link</button>
+                        </div>
+                        </div>
+ </div>
+                    
+                 
                 </div>
 
                 <button type="submit" class="login-btn">Login</button>
@@ -127,3 +140,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
+
