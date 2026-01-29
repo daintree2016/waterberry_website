@@ -79,6 +79,7 @@ if (!empty($_SESSION['cart']) && is_array($_SESSION['cart'])) {
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
     </svg>
 </button>
+
 <div class="hamburger-icon" id="hamburgerIcon">
              ☰
             </div>
