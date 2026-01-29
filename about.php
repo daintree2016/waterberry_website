@@ -30,19 +30,16 @@
     <div class="text-card">
       <h3>Our Story</h3>
       <p>
-        Waterberry is dedicated to bringing top-quality global products to your doorstep. 
-        We specialize in consumer electronics, smart home devices, mobile accessories, 
-        and lifestyle products. With a focus on innovation, quality, and customer satisfaction, 
-        we collaborate with trusted manufacturers worldwide. Offering seamless logistics, timely deliveries, and 
-        exceptional service, we ensure hassle-free imports, making us your reliable partner for 
-        all your business and personal needs.
+        Waterberry is a modern online electronics destination offering a carefully curated range of smart gadgets, 
+        accessories, home tech, and innovative digital products for a smarter, more effortless lifestyle. We focus on quality,
+         design, and functionality to bring you everyday tech that fits seamlessly into modern living.
       </p>
     </div>
   </div>
 </section>
 
     <!-- STATS -->
-    <section class="stats-box">
+    <!-- <section class="stats-box">
       <div class="stat">
         <h3>2025 year</h3>
         <span>Founded </span>
@@ -55,7 +52,24 @@
         <h3> 100%</h3>
         <span>Secure payment</span>
       </div>
-    </section>
+    </section> -->
+    <section class="stats-box">
+  <div class="stat">
+    <h3>2025</h3>
+    <span>Founded</span>
+  </div>
+
+  <div class="stat">
+    <h3>1000+</h3>
+    <span>Products</span>
+  </div>
+
+  <div class="stat">
+    <h3>100%</h3>
+    <span>Secure Payment</span>
+  </div>
+</section>
+
 
     <!-- OUR MISSION -->
     <section class="split">
